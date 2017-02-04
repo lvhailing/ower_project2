@@ -1,0 +1,140 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:fillViewport="true"
+    android:paddingTop="15dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+         >
+
+        <EditText
+            android:id="@+id/et_financial_realName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:hint="真实姓名"
+            android:padding="10dip"
+            android:maxLength="5"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="5dip"
+            android:text="请输入身份证上真实姓名用于佣金结算"
+            android:textSize="12sp"
+            android:textColor="@color/txt_gray"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_financial_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_financial_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="所在地"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_financial_workaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:hint="工作单位"
+            android:maxLength="50"
+            android:padding="10dip"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_financial_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:hint="Email"
+            android:textSize="16sp"
+            
+            android:padding="10dip" />
+
+        <RelativeLayout
+            android:id="@+id/rl_financial_financial_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_financial_card_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="名片或相关证件"
+                android:textSize="16sp"
+                android:textColor="@color/txt_gray"
+                 />
+
+            <ImageView
+                android:id="@+id/iv_financial_card_value_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow" />
+            <ImageView
+                android:id="@+id/iv_financial_card_value"
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@id/iv_financial_card_value_arrow"
+                android:layout_centerVertical="true"
+                android:src="@null" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_financial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginBottom="30dip"
+            android:layout_marginTop="200dip"
+            android:background="@drawable/shape_button_orange"
+            android:text="提交认证"
+            android:textColor="@color/txt_white" />
+    </LinearLayout>
+
+</ScrollView>

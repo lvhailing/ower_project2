@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/r_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/linear_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_recommendproduct_item_title_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_recommendproduct_title_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:singleLine="true"
+                android:text="中融信托-兴创美林湖"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_hotproduct_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/ll_recommendproduct_item_title_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rl_product_saletype"
+                style="@style/XinTuoTepeStyle" >
+
+                <ImageView
+                    style="@style/XinTuoTepe_image_Style"
+                    android:background="@drawable/shape_button_orange" /> <!-- #FF3030 -->
+
+                <TextView
+                    android:id="@+id/tv_product_saletype"
+                    style="@style/XinTuoTepe_text_Style" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_product_hottype"
+                style="@style/XinTuoTepeStyle"
+                android:layout_marginLeft="5dip" >
+
+                <ImageView
+                    style="@style/XinTuoTepe_image_Style"
+                    android:background="@drawable/shape_button_red" />
+
+                <TextView
+                    android:id="@+id/tv_product_hottype"
+                    style="@style/XinTuoTepe_text_Style"
+                    android:text="热销" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/rl_product_recommendtype"
+                style="@style/XinTuoTepeStyle"
+                android:layout_marginLeft="5dip" >
+
+                <ImageView
+                    style="@style/XinTuoTepe_image_Style"
+                    android:background="@drawable/shape_center_blue" />
+
+                <TextView
+                    android:id="@+id/tv_product_recommendtype"
+                    style="@style/XinTuoTepe_text_Style"
+                    android:text="推荐" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+             >
+
+            <ImageView
+                android:id="@+id/iv_recommend_product_creditlevel"
+                android:layout_width="40dip"
+                android:layout_height="15dip"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+             <TextView
+                android:id="@+id/iv_hot_product_creditlevel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:lines="1"
+                android:text="无评级"
+                android:textColor="@color/orange"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_image"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout 
+            style="@style/XinTuo_context_linear_Style" >
+
+            <TextView
+                android:id="@+id/tv_prodeuct_recommend_content_first_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100万元起"
+                android:textColor="@color/bg_orange"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_prodeuct_recommend_content_first_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:text="认购金额"
+                android:textSize="10sp"
+                android:textColor="@color/gray_d" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/XinTuo_context_linear_Style" >
+
+            <TextView
+                android:id="@+id/tv_prodeuct_recommend_content_Second_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100万元起"
+                android:textColor="@color/bg_orange"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_prodeuct_recommend_content_Second_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:text="产品期限"
+                android:textSize="10sp"
+                android:textColor="@color/gray_d" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/XinTuo_context_linear_Style" >
+
+            <TextView
+                android:id="@+id/tv_product_recommend_content_Third_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="100万元起"
+                android:textColor="@color/bg_orange"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_product_recommend_content_Third_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:text="返佣比例"
+                android:textSize="10sp"
+                android:textColor="@color/gray_d" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_two"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:layout_marginTop="10dp" >
+
+        <com.cf360.view.MyProgressBar
+            android:id="@+id/mypb_recommendproduct_ProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progressbar_color"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="90" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/relativebar" >
+    </RelativeLayout>
+
+</LinearLayout>

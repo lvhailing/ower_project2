@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+   <ScrollView 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       >
+       <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+         android:background="#ffffff"
+        >
+        <TextView 
+     		android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+             android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:textColor="#999"
+            android:text="投资领域"
+            />
+         <com.cf360.view.MygridVeiw
+            android:id="@+id/Sai_gridview_one" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:listSelector="#00000000"
+            android:verticalSpacing="7dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+             >
+            
+        </com.cf360.view.MygridVeiw>
+         <TextView 
+     		android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:textColor="#999"
+            android:text="发行机构"
+            />
+         
+             <com.cf360.view.MygridVeiw
+            android:id="@+id/Sai_gridview_two" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:listSelector="#00000000"
+            android:verticalSpacing="7dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+             >
+            
+        </com.cf360.view.MygridVeiw>
+           <TextView 
+     		android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:textColor="#999"
+            android:text="佣金比例"
+            />
+         
+             <com.cf360.view.MygridVeiw
+            android:id="@+id/Sai_gridview_three" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:listSelector="#00000000"
+            android:verticalSpacing="7dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+             >
+            
+        </com.cf360.view.MygridVeiw>
+           <TextView 
+     		android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:textColor="#999"
+            android:text="预期收益"
+            />
+         
+             <com.cf360.view.MygridVeiw
+            android:id="@+id/Sai_gridview_four" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:listSelector="#00000000"
+            android:verticalSpacing="7dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+             >
+            
+        </com.cf360.view.MygridVeiw>
+         <TextView 
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:background="@color/light_gray"
+         android:layout_marginTop="8dp"
+         android:layout_marginLeft="7dp"
+         android:layout_marginRight="7dp"
+         />
+   <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/Cancle"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/button_while_selector"
+                    android:text="取消"
+                    android:textColor="@drawable/button_cancle_style"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp" />
+
+                <Button
+                    android:id="@+id/Confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/buttonyuyue_selector"
+                    android:text="确定"
+                    android:textColor="@drawable/button_view_style"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+ 
+    </LinearLayout>
+       
+       
+   </ScrollView>
+
+</merge>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/r_gridview"
+    android:layout_width="96dp"
+    android:layout_height="35dp"
+    android:gravity="center" >
+
+    
+         <ImageView
+        android:id="@+id/grid_imageview1"
+        android:layout_width="96dp"
+        android:layout_height="35dp"
+        android:background="#E8E8E8" />
+
+    <TextView
+        android:id="@+id/grid_text1"
+      android:layout_width="96dp"
+        android:layout_height="35dp"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:gravity="center"
+        android:text="基础设施基础设施"
+        android:textColor="#000000" />
+   
+
+
+</RelativeLayout>

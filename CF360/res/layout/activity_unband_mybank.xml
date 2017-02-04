@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:orientation="vertical"
+    android:padding="15dip" >
+
+    <RelativeLayout
+        android:id="@+id/rl_myperson_unband_banditem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_center_white_gray"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView 
+	            android:id="@+id/mybank_name"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="zhangsan"
+            />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip" >
+
+                <TextView
+                    android:id="@+id/mybank_bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工商银行:"
+                    android:textSize="12sp"
+                	android:textColor="@color/txt_gray_d" />
+
+                <TextView
+                    android:id="@+id/mybank_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12454521****1245"
+                    android:textSize="12sp"
+                	android:textColor="@color/txt_gray_d" />
+            </LinearLayout>
+        </LinearLayout>
+
+	</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_myperson_unband_banditem"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:padding="10dip" >
+
+            <EditText
+                android:id="@+id/et_unband_verifcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:hint="输入验证码" />
+
+            <Button
+                android:id="@+id/btn_unband_bank_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_button_orange"
+                android:gravity="center"
+                android:paddingBottom="5dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="5dip"
+                android:text="获取验证码"
+                android:textColor="@color/txt_white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入通过"
+                android:textColor="@color/txt_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_unband_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="135****4512"
+                android:textColor="@color/txt_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收到的短信验证码。"
+                android:textColor="@color/txt_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_mybank_unband"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_button_orange"
+        android:text="确认解除绑定"
+        android:textColor="@color/txt_white" />
+
+</RelativeLayout>

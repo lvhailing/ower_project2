@@ -1,0 +1,302 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:fillViewport="true"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dip"
+        android:orientation="vertical"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="15dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单位名称:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_financial_realName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="法人姓名:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_financial_legalPersonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="公司所在地:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_financial_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="详细地址:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_financial_address_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text=""
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dip"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="5dip"
+                android:text="上传凭证:" />
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginBottom="10dip"
+			    android:orientation="vertical"
+			    >
+			    <LinearLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        >
+			        <LinearLayout
+					    android:orientation="vertical"  
+					    android:layout_width="0dip"
+					    android:layout_weight="1"
+					    android:layout_height="wrap_content"  
+					    android:layout_marginTop="5dp"
+					    >
+					    <ImageView  
+					        android:id="@+id/iv_bankAccountLicence_img"
+					        android:layout_width="100dp"
+					        android:layout_height="150dp"
+					        android:layout_gravity="center"
+					        android:scaleType="fitXY"
+					        android:padding="4dp"
+					       />
+					    <TextView  
+					        android:id="@+id/tv_bankAccountLicence_name"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"  
+					        android:layout_gravity="center"
+					        android:gravity="center_horizontal"
+					        />
+					</LinearLayout>
+			        <LinearLayout
+					    android:orientation="vertical"  
+					    android:layout_width="0dip"
+					    android:layout_weight="1"
+					    android:layout_height="wrap_content"  
+					    android:layout_marginTop="5dp"
+					    >
+					    <ImageView  
+					        android:id="@+id/iv_bankCreditCode_img"
+					        android:layout_width="100dp"
+					        android:layout_height="150dp"
+					        android:layout_gravity="center"
+					        android:scaleType="fitXY"
+					        android:padding="4dp"
+					       />
+					    <TextView  
+					        android:id="@+id/tv_bankCreditCode_name"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"  
+					        android:layout_gravity="center"
+					        android:gravity="center_horizontal"
+					        />
+					</LinearLayout>
+			        
+			        
+			    </LinearLayout>
+			    <LinearLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        >
+			        <LinearLayout
+					    android:orientation="vertical"  
+					    android:layout_width="0dip"
+					    android:layout_weight="1"
+					    android:layout_height="wrap_content"  
+					    android:layout_marginTop="5dp"
+					    >
+					    <ImageView  
+					        android:id="@+id/iv_busiCode_img"
+					        android:layout_width="100dp"
+					        android:layout_height="150dp"
+					        android:layout_gravity="center"
+					        android:scaleType="fitXY"
+					        android:padding="4dp"
+					       />
+					    <TextView  
+					        android:id="@+id/tv_busiCode_name"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"  
+					        android:layout_gravity="center"
+					        android:gravity="center_horizontal"
+					        />
+					</LinearLayout>
+			        <LinearLayout
+					    android:orientation="vertical"  
+					    android:layout_width="0dip"
+					    android:layout_weight="1"
+					    android:layout_height="wrap_content"  
+					    android:layout_marginTop="5dp"
+					    >
+					    <ImageView  
+					        android:id="@+id/iv_inStuCode_img"
+					        android:layout_width="100dp"
+					        android:layout_height="150dp"
+					        android:layout_gravity="center"
+					        android:scaleType="fitXY"
+					        android:padding="4dp"
+					       />
+					    <TextView  
+					        android:id="@+id/tv_inStuCode_name"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"  
+					        android:layout_gravity="center"
+					        android:gravity="center_horizontal"
+					        />
+					</LinearLayout>
+			        
+			        
+			    </LinearLayout>
+			    <LinearLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        >
+			        <LinearLayout
+					    android:orientation="vertical"  
+					    android:layout_width="0dip"
+					    android:layout_weight="1"
+					    android:layout_height="wrap_content"  
+					    android:layout_marginTop="5dp"
+					    android:layout_marginBottom="5dip"
+					    >
+					    <ImageView  
+					        android:id="@+id/iv_registrationCode_img"
+					        android:layout_width="100dp"
+					        android:layout_height="150dp"
+					        android:layout_gravity="center"
+					        android:scaleType="fitXY"
+					        android:padding="4dp"
+					       />
+					    <TextView  
+					        android:id="@+id/tv_registrationCode_name"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"  
+					        android:layout_gravity="center"
+					        android:gravity="center_horizontal"
+					        />
+					</LinearLayout>
+			        <LinearLayout
+					    android:orientation="vertical"  
+					    android:layout_width="0dip"
+					    android:layout_weight="1"
+					    android:layout_height="wrap_content"  
+					    android:layout_marginTop="5dp"
+					    >
+					    <ImageView  
+					        android:id="@+id/image_financial_item"
+					        android:layout_width="100dp"
+					        android:layout_height="150dp"
+					        android:layout_gravity="center"
+					        android:scaleType="fitXY"
+					        android:padding="4dp"
+					       />
+					    <TextView  
+					        android:id="@+id/title_financial_item"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"  
+					        android:layout_gravity="center"
+					        android:gravity="center_horizontal"
+					        />
+					</LinearLayout>
+			        
+			        
+			    </LinearLayout>
+			    
+			</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

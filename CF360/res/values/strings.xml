@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation"
+    >
+
+    <string name="app_name">财富360</string>
+    <string name="app_chinesename">财富360版本更新</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="back">返回</string>
+    <string name="btn_true">确认</string>
+    <string name="btn_find_pw">密码重置</string>
+    <string name="app_id">CF360</string>
+    <string name="order_load_toast">正在加载数据，请稍候…</string>
+    <!-- uitl -->
+    <string name="net_fail_text___2">当前网络不可用，点此检查网络设置</string>
+    <string name="net_fail_text">似乎已断开与互联网的连接</string>
+    <string name="net_fail_text_2">网络已断开，无法打开网页</string>
+    <string name="net_fail_text_3">请检查您的网络，重新加载吧。</string>
+    <string name="home_transfer_reast">剩余 &lt;font color= #ff9911 &gt;%s&lt;/font&gt; 天</string>
+    <string name="home_transfer_percent">&lt;font size = "35" color = #ff9911 &gt;%s&lt;/font&gt; %%</string>
+
+    <!-- 登录 -->
+    <string name="login_username">账户名</string>
+    <string name="login_password">密码</string>
+    <string name="login_authcode">验证码</string>
+    <string name="login_getpassword">忘记密码？</string>
+    <string name="login_noauthcode">验证码不正确,请重新输入</string>
+    <string name="login_nouserorpass">用户名或密码不正确，请重新输入</string>
+    <string name="login_title">登录财富360</string>
+
+    <!-- 注册 -->
+    <string name="signup_username">手机号</string>
+    <string name="signup_getphoneauth">获取验证码</string>
+    <string name="signup_gettallauth">获取语音验证码</string>
+    <string name="signup_authcode">短信验证码</string>
+    <string name="signup_authcode_findpw">输入验证码</string>
+    <string name="signup_nike">昵称</string>
+    <string name="signup_password">密码</string>
+    <string name="signup_loginpw">登录密码</string>
+    <string name="signup_agree">我已阅读并同意</string>
+    <string name="signup_web">《财富360》服务协议</string>
+    <string name="insurance_web">《保险个人代理合同书》</string>
+    <string name="signup_time">秒后重新获取</string>
+    <string name="signup_sign">注册</string>
+    <string name="signup_sign_now">立即注册</string>
+    <string name="signup_next">下一步</string>
+    <string name="signup_channelPhone">渠道经理手机号（选填）</string>
+
+    <!-- 找回密码 -->
+    <string name="findpd_next">下一步</string>
+    <string name="findpd_auth">短信验证码</string>
+    <string name="findpd_phone">输入注册手机号</string>
+    <string name="findpd_newpwd">新密码</string>
+    <string name="findpd_newpwd2">确认密码</string>
+    <string name="findpd_text">密码长度在6–16个字符之间，不能包含空格</string>
+    <string name="findpd_success">修改成功</string>
+    <string name="findpd_null">密码不能为空，请重新输入</string>
+    <string name="findpd_short">您输入的密码长度小于6位，请确认密码长度在6–16字符之间且不包含空格</string>
+    <string name="findpd_noequal">两次密码不一致，请重新输入</string>
+    <string name="findpd_hasspace">密码中不能含有空格</string>
+
+    <!-- 手势密码 -->
+    <string name="setup_gesture_code">设置手势密码</string>
+    <string name="setup_gesture_pattern">绘制解锁图案</string>
+    <string name="setup_gesture_pattern_again">再次绘制解锁图案</string>
+    <string name="forget_gesture_code">忘记手势密码</string>
+    <string name="use_other_account_login">用其他账号登录</string>
+    <string name="set_gesture_pattern">绘制解锁图案</string>
+    <string name="set_gesture_pattern_reason">设置手势密码，防止他人未经授权查看</string>
+    <string name="set_gesture_pattern_jump">跳过</string>
+    <string name="reset_gesture_code">重新设置</string>
+
+    <!-- 修改手机号码 -->
+    <string name="changephone_phone">手机号：</string>
+    <string name="changephone_next">下一步</string>
+    <string name="changephone_new">请输入新手机号</string>
+
+    <!-- 修改密码 -->
+    <string name="changepwd_old">旧密码</string>
+    <string name="changepwd_new">新密码</string>
+    <string name="changepwd_new2">确认密码</string>
+
+    <!-- 修改手势密码 -->
+    <string name="changegesture_loginpwd">请输入登录密码</string>
+    <string name="changegesture_ok">验证</string>
+
+    <!-- web页 -->
+    <string name="web_express">快递详情</string>
+    <string name="web_hint">何为犹豫期？</string>
+    <string name="web_sign">服务协议</string>
+    <string name="web_product_advager">项目亮点</string>
+    <string name="web_equitproduct_advager">产品介绍</string>
+    <!-- 提现 -->
+    <string name="withdraw_used">可用余额</string>
+    <string name="withdraw_money">请输入提取金额，最低5元</string>
+    <string name="withdraw_all">全提</string>
+    <string name="withdraw_authcode">短信验证码</string>
+    <string name="withdraw_sms">获取短信验证码</string>
+    <string name="withdraw_read">已阅读提现提示</string>
+    <string name="withdraw_info"> （充值资金未投资直接提现，将收取提现金额的0.5%作为转账费用）</string>
+    <string name="withdraw_ok">确认提现</string>
+    <string name="withdraw_advice_01">提示信息</string>
+    <string name="withdraw_advice_02">1.开通汇付天下第三方资管账户、完成提现银行卡绑卡后，才能进行提现操作；</string>
+    <string name="withdraw_advice_03">2.每笔提现申请最低5元，汇付天下将收取2元/笔的提现手续费；</string>
+    <string name="withdraw_advice_04">3.充值资金未投资直接提现，将收取提现金额的0.5%作为转账费用,详见【收费标准】。</string>
+    <string name="withdraw_advice_05">4.资金到达用户账户的当日即可申请提现，除偏远地区外的大部分银行卡，当日取现下一个工作日到账。</string>
+    <string name="withdraw_advice_06">5.遇到问题请联系【在线客服】，或者致电客服热线：400–057–8855 </string>
+
+    <!-- title -->
+    <string name="title_main">首页</string>
+    <string name="title_login">立即登录</string>
+    <string name="title_no"></string>
+    <string name="title_signup">注册</string>
+    <string name="title_logintv">登录财富360</string>
+    <string name="title_findpwd">密码找回</string>
+    <string name="title_gestureunlock">解锁</string>
+    <string name="title_gestureset">设置手势密码</string>
+    <string name="title_charge">充值</string>
+    <string name="title_withdraw">选择提现账户</string>
+    <string name="title_withdraw_verify">申请提现</string>
+    <string name="title_accountset">账户设置</string>
+    <string name="title_changephone">修改手机号</string>
+    <string name="title_changepwd">修改密码</string>
+    <string name="title_changegesture">修改手势密码</string>
+    <string name="title_advice">意见反馈</string>
+    <string name="title_about">关于财富360</string>
+    <string name="title_order">我的预约</string>
+    <string name="title_order_details">预约详情</string>
+    <string name="title_contract_details">合同详情</string>
+    <string name="title_contract">我的合同</string>
+    <string name="title_apply_contract">申请合同</string>
+    <string name="title_myperson">我的财富</string>
+    <string name="title_financial">理财师认证</string>
+    <string name="title_search_product">产品搜索</string>
+    <string name="title_financialagentaudit">机构认证</string>
+    <string name="title_insurance">保险代理认证</string>
+    <string name="title_mybank">我的银行卡</string>
+    <string name="title_post_contract">寄回合同</string>
+    <string name="title_toubaodan">我的投保单</string>
+    <string name="title_toubaodan_details">投保单详情</string>
+    <string name="title_baodan_details">保单详情</string>
+    <string name="title_apply_toubaodan">申请投保单</string>
+    <string name="title_post_toubaodan">寄回保单</string>
+    <string name="title_declaration">我的报单</string>
+    <string name="title_apply_declaration">我要报单</string>
+    <string name="title_edit_declaration">修改报单</string>
+    <string name="title_declaration_details">报单详情</string>
+    <string name="title_apply_declaration_info">报单说明</string>
+    <string name="title_focus">我的关注</string>
+    <string name="title_declaration_info">报单说明</string>
+    <string name="title_select_product">选择产品</string>
+    <string name="title_myperson_info">收支明细</string>
+    <string name="title_myperson_info_detail">收支详情</string>
+    <string name="title_addmybank">绑定银行卡</string>
+    <string name="title_unbindmybank">解除绑定</string>
+    <string name="title_addmybankchose">选择银行</string>
+    <string name="title_setting">设置</string>
+    <string name="title_setting_advice">意见反馈</string>
+    <string name="title_notice">通知</string>
+    <string name="title_notice_detail">公告详情</string>
+    <string name="title_messgae_detail">消息详情</string>
+    <string name="title_mycustomer">我的客户</string>
+    <string name="title_mycustomer_follow">客户跟踪</string>
+    <string name="title_mycustomer_info">客户信息</string>
+    <string name="title_mycustomer_his_toubao">Ta成交的投保单</string>
+    <string name="title_mycustomer_schedile">Ta的日程</string>
+    <string name="title_mycustomer_base_info">基本信息</string>
+    <string name="title_mycustomer_phone">联系方式</string>
+    <string name="title_mycustomer_intention">投资意向</string>
+    <string name="title_mycustomer_financial">财务状况</string>
+    <string name="title_mycustomer_instest">兴趣爱好</string>
+    <string name="title_add_schedule">新建日程</string>
+    <string name="title_his_baodan">Ta成交的报单</string>
+    <string name="title_his_schedule">Ta的日程</string>
+    <string name="title_mycustomer_add">新增客户</string>
+    <string name="title_select_customer">选择客户</string>
+    <string name="title_schedule_details">日程详情</string>
+    <string name="title_add_schedule_action">新建日程</string>
+    <!-- 寄回保单 -->
+    <string name="post_toubaodan_tbd">投保单</string>
+    <string name="post_toubaodan_tbd_hint">投保提示</string>
+    <string name="post_toubaodan_insurance_plan">保险计划书</string>
+    <string name="post_toubaodan_applicantID">投保人身份证复印件</string>
+    <string name="post_toubaodan_insuredID">被保人身份证复印件</string>
+    <string name="post_toubaodan_bank">扣款银行卡复印件</string>
+    <string name="post_toubaodan_hkb">户口本复印件</string>
+    <string name="post_toubaodan_cszm">出生证明复印件</string>
+
+    <!-- 我的财富 -->
+
+    <string name="myperson_commission_money">佣金余额(元)</string>
+    <string name="myperson_alldeal_money">累计成交(万元)</string>
+    <string name="myperson_allcommission_money">累计佣金(元)</string>
+    <string name="myperson_financial">理财师认证</string>
+    <string name="myperson_corp">机构认证</string>
+    <string name="myperson_insurance">保险代理认证</string>
+    <string name="myperson_info">收支明细</string>
+    <string name="myperson_mycustomer">我的客户</string>
+    <string name="myperson_customer_follow">客户跟踪</string>
+    <string name="myperson_mybank">我的银行卡</string>
+    <string name="myperson_withdraw">申请提现</string>
+
+    <!-- 设置 -->
+
+    <string name="setting_gesture_chose">手势密码</string>
+    <string name="setting_gesture_update">修改手势密码</string>
+    <string name="setting_password_update">修改登录密码</string>
+    <string name="setting_advice">意见反馈</string>
+    <string name="setting_help">帮助中心</string>
+    <string name="setting_help_item">帮助详情</string>
+    <string name="setting_score">为CF360打分</string>
+    <string name="setting_agreement">服务协议</string>
+    <string name="setting_about">关于</string>
+    <string name="setting_about_me">关于我们</string>
+    <string name="setting_phone">400-066-9355</string>
+    <string name="setting_logout">退出登录</string>
+    <string name="setting_advice_btn">提交反馈</string>
+    <string name="setting_advice_content">说说您的意见及建议，我们将为您不断改进。</string>
+    <string name="setting_advice_email">您的联系方式(邮箱)</string>
+    <!-- 信托全部内容 -->
+    <string name="xintuo_content_title">全部产品</string>
+    <string name="xintuo_Details_title">信托产品</string>
+    <string name="xintuo_title_item">信托详情</string>
+    <string name="sunshine_title">阳光私募</string>
+    <string name="sunDetails_title">阳光私募详情</string>
+    <string name="ziguan_Details_title">资管产品</string>
+    <string name="ziguan_title_item">资管详情</string>
+    <string name="equity_Details_title">私募股权</string>
+    <string name="equity_title_item">私募股权详情</string>
+    <string name="ins_Details_title">保险</string>
+    <string name="insurance_title_item">保险详情</string>
+    <string name="appointment">我要预约</string>
+    <string name="insurance_text">图文详情</string>
+    
+    <!-- 客户信息 -->
+    
+    <string name="customer_has_baodan">Ta成交的报单</string>
+    <string name="customer_day_load">Ta的日程</string>
+    <string name="customer_base_info">基本信息</string>
+    <string name="customer_phone">联系方式</string>
+    <string name="customer_touzi_yixinag">投资意向</string>
+    <string name="customer_money">财务状况</string>
+    <string name="customer_instest">兴趣爱好</string>
+    <string name="customer_add_newcustomer">新增客户</string>
+    <string name="customer_delete_newcustomer">删除</string>
+    <string name="customer_save_newcustomer">保存</string>
+    
+     <!-- 新建日程 -->
+     
+    <string name="customer_name">客户姓名</string>
+    <string name="schedule_type">日程类型</string>
+    <string name="schedule_theme">日程主题</string>
+    <string name="schedule_describe">日程描述</string>
+    <string name="schedule_start_time">开始时间</string>
+    <string name="schedule_end_time">结束时间</string>
+    <string name="schedule_remind">日程提醒</string>
+    <string name="remind_time">提醒时间</string>
+    <string name="schedule_state">日程状态</string>
+    <string name="schedule_delete">删除</string>
+    
+   <!--  <string name="customer_has_baodan">私募股权</string>
+    <string name="customer_has_baodan">私募股权详情</string>
+    <string name="customer_has_baodan">保险</string>
+    <string name="customer_has_baodan">保险详情</string>
+    <string name="customer_has_baodan">我要预约</string>
+    <string name="customer_has_baodan">图文详情</string> -->
+    
+    
+</resources>

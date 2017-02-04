@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cf360"
+    android:versionCode="2"
+    android:versionName="V1.106" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />           //系统改变Z轴排列任务的权限
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        android:name="com.cf360.VjinkeApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cf360.act.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cf360.act.MainActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity android:name="com.cf360.act.MyPersonActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.SignupActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.cf360.act.FindPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.GestureEditActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.GestureVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ChangeGestureActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.WebActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.FocusActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.DeclarationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.DeclarationDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.OrderActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ContractActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ToubaodanActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.OrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.InsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.FinancialActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.MyBankActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.InfoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ApplyContractActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ContractDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.PostContractActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ToubaodanDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ApplyToubaodanActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.PostToubaodanActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ApplyDeclarationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ApplyDeclarationNotInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ApplyDeclarationNotInsuranceForOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.Signup2Activity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.SelectProductActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.DeclarationInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.EditDeclarationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.EditDeclarationNotInsuranceActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ApplyDeclarationForOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.ImageShower"
+            android:screenOrientation="portrait" />
+
+        <!-- 所有产品界面 -->
+        <activity android:name="com.cf360.act.MContentAllActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 信托界面 -->
+        <activity android:name="com.cf360.act.MTrustDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.cf360.act.AddBankActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.AddBankChoseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.UnBandActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.AdviceActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.SettingHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.SettingHelpDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.WithdrawVerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.InfoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.InsuranceAgentAudit"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.SearchProductActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.NoticeMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cf360.act.NoticeMessageDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 信托详情界面Item布局 -->
+        <activity android:name="com.cf360.act.TrustDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 阳光私募 -->
+        <activity android:name="com.cf360.act.MSunshineActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 阳光私募详情页面 -->
+        <activity android:name="com.cf360.act.SunshineActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 私募股权 -->
+        <activity android:name="com.cf360.act.MEquityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+          <activity android:name="com.cf360.act.CEquityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 私募股权 详情 -->
+        <activity android:name="com.cf360.act.EquityItmeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 资管页面 -->
+        <activity android:name="com.cf360.act.MZiGuanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 资管详情页面 -->
+        <activity android:name="com.cf360.act.ZiGuanItemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 保险页面 -->
+        <activity android:name="com.cf360.act.MInsuranceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 保险详情页面 -->
+        <activity android:name="com.cf360.act.InsuranceItmeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的预约 -->
+        <activity android:name="com.cf360.act.AppointmentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        <!-- 图文详情 -->
+        <activity android:name="com.cf360.act.InsDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 我的客户 -->
+        <activity android:name="com.cf360.act.CustomerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户跟踪 -->
+        <activity android:name="com.cf360.act.CustomerFollowActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户信息 -->
+        <activity android:name="com.cf360.act.CustomerInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+        <!-- 客户基本信息 -->
+        <activity android:name="com.cf360.act.CustomerBaseInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户联系方式 -->
+        <activity android:name="com.cf360.act.CustomerPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户投资意向 -->
+        <activity android:name="com.cf360.act.CustomerIntentionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户理财状况 -->
+        <activity android:name="com.cf360.act.CustomerFinancialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户兴趣爱好 -->
+        <activity android:name="com.cf360.act.CustomerInstestActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 客户日程 -->
+        <!-- 他的投保单 -->
+        <activity android:name="com.cf360.act.CustomerHisBaodanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 新建日程 -->
+        <activity android:name="com.cf360.act.AddScheduleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 他的日程 -->
+        <activity android:name="com.cf360.act.HisScheduleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 他成交的报单 -->
+        <activity android:name="com.cf360.act.HisBaoDanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <!-- 添加客户 -->
+        <activity android:name="com.cf360.act.CustomerAddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 选择客户 -->
+        <activity android:name="com.cf360.act.SelectCustomerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 日程详情-->
+        <activity android:name="com.cf360.act.ScheduleDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+        <!-- 保险预约 -->
+        <activity
+            android:name="com.cf360.act.InsAppointmentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.cf360.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.cf360.service.AppUpgradeService" />
+
+        <receiver android:name="com.cf360.push.PushTestReceiver" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+
+        <!-- 授权操作 -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!--<meta-data-->
+            <!--android:name="api_key"-->
+            <!--android:value="nM7eYjMXewXYMtyI3AAS6Zl6" />-->
+    </application>
+
+</manifest>

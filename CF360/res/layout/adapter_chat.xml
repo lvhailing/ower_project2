@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_customer_item"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/mm_listitem"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/head_layout"
+            android:layout_width="45dp"
+            android:layout_height="80dp" >
+
+            <ImageView
+                android:id="@+id/iv_customer_sex"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_customer_man"
+                android:paddingLeft="5dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dip"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/head_layout"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_customer_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="3dip"
+                    android:gravity="center_vertical"
+                    android:text="小王"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dip"
+                android:layout_marginTop="2dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_customer_nick_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="小王"
+                    android:textColor="#666" />
+
+                <ImageView
+                    android:id="@+id/im_cuystomer_remark"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dip"
+                    android:background="@drawable/icon_customer_2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/im_cuystomer_edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="35dip"
+            android:background="@drawable/icon_customer_1" />
+    </RelativeLayout>
+
+</LinearLayout>

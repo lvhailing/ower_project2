@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/low_gray" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/signup_username"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_center_gray"
+            android:hint="@string/signup_username"
+            android:inputType="phone" 
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/signup_authcode_layout"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_username"
+            android:background="@drawable/shape_center_gray"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/signup_authcode"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:hint="@string/signup_authcode"
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="10dp"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/signup_getSMS"
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@drawable/shape_button"
+                android:text="@string/signup_getphoneauth"
+                android:textColor="@color/white"
+                android:textSize="12.0sp"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_authcode_layout"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/signup_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/checkbox_signup"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/signup_agree"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:id="@+id/signup_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/signup_web"
+                android:textColor="@color/orange"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signup_true"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15.0dip"
+            android:background="@drawable/shape_button"
+            android:text="@string/signup_next"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

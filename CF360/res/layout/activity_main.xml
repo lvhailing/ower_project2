@@ -1,0 +1,471 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scroll_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@color/orange">
+
+            <ImageButton
+                android:id="@+id/id_iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/showright_selector"
+                android:onClick="showLeftMenu"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_main_logo"/>
+
+            <TextView
+                android:id="@+id/id_iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/icon_message"
+                android:gravity="center_horizontal"
+                android:paddingBottom="5dip"
+                android:text=""
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/net_fail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/viewpager_layout"
+                android:layout_width="match_parent"
+                android:layout_height="145dp">
+
+                <LinearLayout
+                    android:id="@+id/viewpager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal"/>
+
+                <LinearLayout
+                    android:id="@+id/down_dots_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dip"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewpager_layout"
+                android:background="#F2F2F2">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="10dip">
+
+                    <TextView
+                        android:id="@+id/main_trust"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/img_home_product_trustxt"
+                        android:gravity="center_horizontal"
+                        android:text="信托"/>
+
+                    <TextView
+                        android:id="@+id/main_management"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/img_home_product_trustzg"
+                        android:gravity="center_horizontal"
+                        android:text="资管"/>
+
+                    <TextView
+                        android:id="@+id/main_private_placement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/img_home_product_trustygsm"
+                        android:gravity="center_horizontal"
+                        android:text="阳光私募"/>
+
+                    <TextView
+                        android:id="@+id/main_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/img_home_more"
+                        android:gravity="center_horizontal"
+                        android:text="全部"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_button"
+                style="@style/RepayPlanStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_below="@+id/main_layout"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/main_"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_hot_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/shape_left_orange"
+                        android:text="热销产品"
+                        android:textColor="@color/orange"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:layout_width="0.5dip"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true"
+                        android:src="@color/orange"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn_recommend_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/shape_right_orange"
+                        android:text="产品推荐"
+                        android:textColor="@color/orange"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.cf360.view.MyListView
+                android:id="@+id/lv"
+                style="@style/WidgetDirver"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ll_button"
+                android:layout_marginBottom="5dip"
+                android:cacheColorHint="@color/white"
+                android:divider="@color/white"
+                android:dividerHeight="10dp"
+                android:listSelector="@color/white"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_home_recommend_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ll_button"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_home_product_name_trustxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_home_product_name_trustxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="信托产品"
+                            android:textColor="@color/orange"
+                            android:textSize="10sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/tv_home_product_name_trustxt"
+                            android:src="@color/bg_orange"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_toRightOf="@id/tv_home_product_name_trustxt"
+                            android:src="@color/bg_orange"/>
+                    </RelativeLayout>
+
+                    <com.cf360.view.MyListView
+                        android:id="@+id/lv_home_product_trustxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:divider="@color/gray_light"
+                        android:dividerHeight="0.1dip"
+                        android:scrollbars="none">
+                    </com.cf360.view.MyListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_product_name_trustzg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_home_product_name_trustzg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="资管产品"
+                            android:textColor="@color/orange"
+                            android:textSize="10sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/tv_home_product_name_trustzg"
+                            android:src="@color/bg_orange"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_toRightOf="@id/tv_home_product_name_trustzg"
+                            android:src="@color/bg_orange"/>
+                    </RelativeLayout>
+
+                    <com.cf360.view.MyListView
+                        android:id="@+id/lv_home_product_trustzg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:divider="@color/gray_light"
+                        android:dividerHeight="0.1dip"
+                        android:scrollbars="none">
+                    </com.cf360.view.MyListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_product_name_trustygsm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_home_product_name_trustygsm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="阳光私募"
+                            android:textColor="@color/orange"
+                            android:textSize="10sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/tv_home_product_name_trustygsm"
+                            android:src="@color/bg_orange"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_toRightOf="@id/tv_home_product_name_trustygsm"
+                            android:src="@color/bg_orange"/>
+                    </RelativeLayout>
+
+                    <com.cf360.view.MyListView
+                        android:id="@+id/lv_home_product_trustygsm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:divider="@color/gray_light"
+                        android:dividerHeight="0.1dip"
+                        android:scrollbars="none">
+                    </com.cf360.view.MyListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_product_name_trustsmgq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_home_product_name_trustsmgq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="私募股权"
+                            android:textColor="@color/orange"
+                            android:textSize="10sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/tv_home_product_name_trustsmgq"
+                            android:src="@color/bg_orange"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_toRightOf="@id/tv_home_product_name_trustsmgq"
+                            android:src="@color/bg_orange"/>
+                    </RelativeLayout>
+
+                    <com.cf360.view.MyListView
+                        android:id="@+id/lv_home_product_trustsmgq"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:divider="@color/gray_light"
+                        android:dividerHeight="0.1dip"
+                        android:scrollbars="none">
+                    </com.cf360.view.MyListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_product_name_bx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_home_product_name_bx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="保险"
+                            android:textColor="@color/orange"
+                            android:textSize="10sp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_toLeftOf="@id/tv_home_product_name_bx"
+                            android:src="@color/bg_orange"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="15dip"
+                            android:layout_toRightOf="@id/tv_home_product_name_bx"
+                            android:src="@color/bg_orange"/>
+                    </RelativeLayout>
+
+                    <com.cf360.view.MyListView
+                        android:id="@+id/lv_home_product_trustbx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:divider="@color/gray_light"
+                        android:dividerHeight="0.1dip"
+                        android:scrollbars="none">
+                    </com.cf360.view.MyListView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

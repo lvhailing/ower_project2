@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tv_customer_beizhu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:text="客户备注" />
+
+    <ImageView
+        android:id="@+id/iv_customer_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_customer_beizhu_title"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_listitem_view_h" />
+
+    <EditText
+        android:id="@+id/et_customer_beizhu"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/iv_customer_line"
+        android:layout_margin="15dip"
+        android:background="@drawable/shape_center_white_gray"
+        android:hint="填写备注信息："
+        android:maxLength="10"
+        android:maxLines="1"
+        android:paddingLeft="10dip"
+        android:singleLine="true"
+        android:textColor="@color/txt_gray_d" />
+
+    <ImageView
+        android:id="@+id/iv_customer_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_customer_beizhu"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_listitem_view_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/iv_customer_line_2"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_customer_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_while_beizhu_selector"
+                android:textColor="@drawable/button_while_black_selector"
+                android:text="取消" />
+
+            <ImageView
+                android:id="@+id/iv_customer_line_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/main_listitem_view_v" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_customer_sure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_while_beizhu_selector"
+                android:textColor="@drawable/button_while_black_selector"
+                android:text="确定" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

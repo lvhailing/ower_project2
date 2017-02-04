@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/low_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/WidgetDirver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/changephone_phone" />
+
+        <TextView
+            android:id="@+id/changephone_phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/WidgetDirver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_username"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/changephone_authcode"
+            style="@style/WidgetDirver"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:hint="@string/signup_authcode"
+            android:inputType="number"
+            android:maxLength="6" />
+
+        <Button
+            android:id="@+id/changephone_getSMS"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@drawable/shape_button"
+            android:gravity="center"
+            android:text="@string/signup_getphoneauth"
+            android:textColor="@color/txt_white"
+            android:textSize="12.0sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/changephone_next"
+        style="@style/WidgetDirver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dip"
+        android:background="@drawable/shape_button"
+        android:text="@string/changephone_next"
+        android:textColor="@color/txt_white" />
+
+</LinearLayout>

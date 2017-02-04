@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cf360.widget.DetailWebView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prodetail_web"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true" />

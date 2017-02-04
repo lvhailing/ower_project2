@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light" >
+
+    <TextView
+        android:id="@+id/tv_notice_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dip"
+        android:text="help标题"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rl_notice_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_notice_item_title"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/tv_notice_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dip"
+            android:paddingBottom="5dip"
+            android:text="消息类型:"
+            android:textColor="@color/txt_gray" />
+
+        <TextView
+            android:id="@+id/tv_notice_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="5dip"
+            android:paddingBottom="5dip"
+            android:text="2014-1-1 14:00"
+            android:textColor="@color/txt_gray" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_notice_item"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:src="@color/gray_d" />
+
+    <TextView
+        android:id="@+id/tv_notice_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_line"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:lineSpacingExtra="2dip"
+        android:padding="5dip"
+        android:text="\u3000\u3000段落布局时 需要首行缩进, 虽然可以用html标签但是只是简单的应用,以下是解决方案: 方式一: 在string.xml文件中得到文件中的字符串" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

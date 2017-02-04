@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_intention_customer_investtype"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/shape_center_white"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_intention_customer_investtype"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                
+                android:gravity="center_vertical"
+                android:hint="投资类型"
+                android:paddingLeft="12dip"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_customer_investtype_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/arrow" />
+
+            <TextView
+                android:id="@+id/tv_intention_customer_investtype_value"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:paddingLeft="15dip"
+                android:layout_toLeftOf="@id/iv_customer_investtype_arrow"
+                android:layout_toRightOf="@id/tv_intention_customer_investtype"
+                android:gravity="center_vertical|right"
+                android:text=""
+                android:textColor="@color/txt_gray_d"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_center_white" >
+
+            <TextView
+                android:id="@+id/tv_intention_customer_investtrade"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_center_white"
+                android:gravity="center_vertical"
+                android:hint="投资行业"
+                android:paddingLeft="12dip"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_intention_customer_investtrade_value"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/tv_intention_customer_investtrade"
+                android:background="@drawable/shape_center_white"
+                android:gravity="right|center_vertical"
+                android:hint=""
+                android:paddingRight="10dip"
+                android:layout_marginLeft="5dip"
+                android:maxLines="1"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/txt_gray_d"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_center_white" >
+
+            <TextView
+                android:id="@+id/tv_intention_customer_investmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_center_white"
+                android:gravity="center_vertical"
+                android:hint="投资金额"
+                android:paddingLeft="12dip"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_intention_customer_investmoney_value"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/tv_intention_customer_investmoney"
+                android:background="@drawable/shape_center_white"
+                android:gravity="right|center_vertical"
+                android:hint=""
+                android:paddingRight="10dip"
+                android:layout_marginLeft="5dip"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/txt_gray_d"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_center_white" >
+
+            <TextView
+                android:id="@+id/tv_intention_customer_investyear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_center_white"
+                android:gravity="center_vertical"
+                android:hint="投资年限"
+                android:paddingLeft="12dip"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_intention_customer_investyear_value"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/tv_intention_customer_investyear"
+                android:background="@drawable/shape_center_white"
+                android:gravity="right|center_vertical"
+                android:hint=""
+                android:paddingRight="10dip"
+                android:layout_marginLeft="5dip"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/txt_gray_d"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape_center_white" >
+
+            <TextView
+                android:id="@+id/tv_intention_customer_investincome"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_center_white"
+                android:gravity="center_vertical"
+                android:hint="预期收益"
+                android:paddingLeft="12dip"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_intention_customer_baifen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:text="%" />
+
+            <EditText
+                android:id="@+id/et_intention_customer_investincome_value"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/tv_intention_customer_baifen"
+                android:layout_toRightOf="@id/tv_intention_customer_investincome"
+                android:background="@drawable/shape_center_white"
+                android:gravity="right|center_vertical"
+                android:hint=""
+                android:paddingRight="10dip"
+                android:layout_marginLeft="5dip"
+                android:textColor="@color/txt_gray_d"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+</RelativeLayout>

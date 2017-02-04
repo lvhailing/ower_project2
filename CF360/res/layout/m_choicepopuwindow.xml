@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/r_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDC9C9" />
+
+    <Button
+        android:id="@+id/cancle"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#E8E8E8"
+        android:layout_below="@+id/view"
+        android:text="取消"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/Confirm"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/cancle"
+        android:layout_below="@+id/view"
+        android:background="#CD853F"
+        android:text="确定"
+        android:textColor="#ffffff" />
+    
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/cancle"
+        android:background="#ffffff" />
+
+</RelativeLayout>

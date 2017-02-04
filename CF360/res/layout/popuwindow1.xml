@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="发送邮件"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_center_huise"
+                android:paddingLeft="0.5dp"
+                android:paddingRight="0.5dp" >
+
+                <EditText
+                    android:id="@+id/pup_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_center_white"
+                    android:hint="输入邮件地址"
+                    android:paddingLeft="5dp"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp" 
+            android:background="@drawable/main_listitem_view_h"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="#ffffff"
+                 >
+
+                <Button
+                    android:id="@+id/pup_send"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/button_selector"
+                    android:gravity="center"
+                    android:text="立即发送"
+                    android:textSize="14sp"
+                    android:textColor="@drawable/button_view_style" />
+
+                <Button
+                    android:id="@+id/pup_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_whiteselector"
+                    android:gravity="center"
+                    android:textColor="#666"
+                    android:textSize="14sp"
+                    android:text="取消"
+                     />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

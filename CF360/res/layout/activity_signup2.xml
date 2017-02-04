@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/low_gray" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/signup2_password"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_center_gray"
+            android:hint="@string/signup_loginpw"
+            android:inputType="textPassword"
+            android:padding="10dp"/>
+        <EditText
+            android:layout_below="@+id/signup2_password"
+            android:id="@+id/signup2_nickname"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_center_gray"
+            android:hint="@string/signup_nike"
+            android:padding="10dp" />
+        <EditText
+            android:layout_below="@+id/signup2_nickname"
+            android:id="@+id/signup2_channelPhone"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_center_gray"
+            android:hint="@string/signup_channelPhone"
+            android:inputType="phone" 
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/signup_true"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15.0dip"
+            android:background="@drawable/shape_button"
+            android:text="@string/signup_sign_now"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

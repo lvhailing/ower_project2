@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/select_wheel_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="220dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="220dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.cf360.wheel.widget.WheelView_new
+                android:id="@+id/select_wheel_province"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="220.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/com_ttshrk_view_scroll_picker_background" >
+        </FrameLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/select_wheel_license_plate_cancel"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/white"
+            android:text="取消"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/select_wheel_license_plate_submit"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:background="@android:color/white"
+            android:text="确定"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</LinearLayout>

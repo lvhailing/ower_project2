@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/select_customer_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray_light"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/select_customer_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="7"
+            android:background="@drawable/shape_center_gray"
+            android:drawableLeft="@drawable/search_product"
+            android:hint="输入客户关键字"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/orange" 
+            android:padding="5dp"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/select_customer_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text="确认"
+            android:textColor="@color/orange"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+     <ScrollView
+        android:layout_below="@+id/select_customer_content_layout"
+        android:id="@+id/contract_details_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <com.cf360.view.ListViewForScrollView
+                android:id="@+id/select_customer_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:dividerHeight="0dp"
+                android:divider="@null"/>
+
+        </LinearLayout>
+    </ScrollView> 
+
+</RelativeLayout>

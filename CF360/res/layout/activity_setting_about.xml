@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+         >
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/tv_setting_help_item_title"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_logo" />
+
+            <TextView
+                android:id="@+id/tv_setting_help_item_version_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dip"
+                android:paddingBottom="10dip"
+                android:text="当前版本1.0.1"
+                android:textColor="@color/txt_gray_d"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:src="@color/bg_huise" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_help_item_content_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dip"
+            android:lineSpacingExtra="5dip"
+            android:layout_below="@id/ll_title"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:text="\u3000\u3000财富360（www.cf360.com）是一家面向理财师与理财机构提供全方位精品服务的互联网金融平台，隶属于综合性金融服务集团君德时代投资控股有限公司旗下的子公司——北京君德财富投资管理有限公司。"
+            android:textColor="@color/txt_gray_d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_help_item_content_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:lineSpacingExtra="5dip"
+            android:layout_below="@id/tv_setting_help_item_content_1"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:text="\u3000\u3000作为一家大型金融产品020平台，财富360秉承“结佣最快、佣金最高、产品全而精“的平台运营理念，通过PC端和手机客户端为理财师和理财机构提供全系列全品种金融产品配置服务、个人佣金快速结算服务以及全方位数据和信息服务。"
+            android:textColor="@color/txt_gray_d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_help_item_content_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:lineSpacingExtra="5dip"
+            android:layout_below="@id/tv_setting_help_item_content_2"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:text="\u3000\u3000可信赖、风控严、产品精。财富360目前已经与中铁信托、中信集团、华能信托、五矿信托、中粮信托、北方信托、中国人保、中国平安、国华人寿等金融机构建立了长期合作关系，向平台用户提供包括阳光私募、信托、资管计划、保险等全系列丰富优质产品。"
+            android:textColor="@color/txt_gray_d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_setting_help_item_content_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:lineSpacingExtra="5dip"
+            android:layout_marginBottom="30dip"
+            android:layout_below="@id/tv_setting_help_item_content_3"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:text="\u3000\u3000财富360将致力于推动“大资管时代”向着更深更广的层次发展，将引导国内“家族办公室“的财富管理模式走向成熟。"
+            android:textColor="@color/txt_gray_d"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_setting_help_item_content_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dip"
+            android:lineSpacingExtra="5dip"
+            android:layout_marginBottom="30dip"
+            android:layout_below="@id/tv_setting_help_item_content_4"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:text=""
+            android:textColor="@color/txt_gray_d"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</ScrollView>

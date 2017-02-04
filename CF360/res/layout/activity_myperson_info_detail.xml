@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white_gray"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_info_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="" />
+            <TextView
+                android:id="@+id/tv_info_detail_name_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_info_detail_name"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/gray_d" />
+
+            <ImageView
+                android:id="@+id/iv_info_detail_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:gravity="center_vertical"
+                android:src="@drawable/arrow"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dip"
+            android:layout_weight="1.5"
+            android:background="@drawable/shape_white_gray"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_info_detail_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+0.00"
+                    android:textColor="@color/orange"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="佣金"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.0"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_info_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="15dip"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:padding="3dip" >
+
+                <TextView
+                    android:id="@+id/tv_info_detail_liushuihao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="流水号:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp"
+                     />
+                <TextView
+                    android:id="@+id/tv_info_detail_tixianfangshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="提现方式:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp"
+                     />
+                <TextView
+                    android:id="@+id/tv_info_detail_tixianzhanghu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="提现账户:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp"
+                     />
+                <TextView
+                    android:id="@+id/tv_info_detail_tixianzhanghu_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_baodanbianhao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="报单编号:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_kehuname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="客户姓名:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+
+                <ListView
+                    android:id="@+id/tv_info_detail_dakuanjine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dip"
+                    android:divider="@color/gray_light"
+                    android:dividerHeight="5dip"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none" />
+                <TextView
+                    android:id="@+id/tv_info_detail_fujiabaoxian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="附加保险:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_jiaofeinianqi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="缴费年期:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+
+                <!-- <TextView
+                    android:id="@+id/tv_info_detail_fanyongbili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="返佣比例:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" /> -->
+                <ListView
+                    android:id="@+id/tv_info_detail_fanyongbili"
+                    android:layout_marginTop="5dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/gray_light"
+                    android:dividerHeight="5dip"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none" >
+                </ListView>
+				<TextView
+                    android:id="@+id/tv_info_detail_fanyongjine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="返佣比例:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_fanyongfangshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="返佣方式:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_hulv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="汇率:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_zhuangtai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="状态:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_chuangjianshijian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="创建时间:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_zhangdanriqi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="账单日期:"
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_info_detail_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:layout_toRightOf="@id/ll_info_detail_title"
+                android:orientation="vertical"
+                android:padding="3dip" >
+
+                <TextView
+                    android:id="@+id/tv_info_detail_liushuihao_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_tixianfangshi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_tixianzhanghu_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_tixianzhanghu_1_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_baodanbianhao_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_info_detail_kehuname_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+
+                <ListView
+                    android:id="@+id/tv_info_detail_dakuanjine_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dip"
+                    android:divider="@color/gray_light"
+                    android:dividerHeight="5dip"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none" />
+			<TextView
+                    android:id="@+id/tv_info_detail_fanyongjine_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textColor="@color/txt_gray_d"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_fujiabaoxian_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_jiaofeinianqi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+                <!-- <TextView
+                    android:id="@+id/tv_info_detail_fanyongbili_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="454215423214"
+                    android:textSize="10sp" /> -->
+                <ListView
+                    android:id="@+id/tv_info_detail_fanyongbili_value"
+                    android:layout_marginTop="5dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/gray_light"
+                    android:dividerHeight="5dip"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none" >
+                </ListView>
+                <TextView
+                    android:id="@+id/tv_info_detail_fanyongfangshi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_huilv_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_zhuangtai_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_chuangjianshijian_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/tv_info_detail_zhangdanriqi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:orientation="vertical" >
+	   
+        
+    <LinearLayout
+        android:id="@+id/rl_setting_help_first"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center"
+         >
+
+        <TextView
+            android:id="@+id/tv_setting_help_title"
+            android:layout_width="0dip"
+            android:layout_weight="12"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="帮助的标题" />
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+   
+</LinearLayout>

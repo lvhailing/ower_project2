@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/loadingImageView" android:background="@anim/loading_anim_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:layout_centerInParent="true" />
+    <ImageView android:id="@+id/loadingImageView_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/loading_progress_red2" android:scaleType="centerInside" android:layout_centerInParent="true" />
+    <TextView android:textSize="18.0sp" android:id="@+id/id_tv_loadingmsg" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_below="@+id/loadingImageView" android:layout_centerHorizontal="true" />
+</RelativeLayout>

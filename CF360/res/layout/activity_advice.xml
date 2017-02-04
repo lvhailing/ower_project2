@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray_light"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+		<EditText 
+		    android:id="@+id/et_advice_input"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/shape_center_white_gray"
+		    android:layout_marginTop="30dip"
+		    android:layout_marginLeft="10dip"
+		    android:layout_marginRight="10dip"
+		    android:padding="8dip"
+		    android:inputType="textMultiLine"
+		    android:gravity="top"
+		    android:minLines="10"
+		    android:maxLength="200"
+		    android:hint="@string/setting_advice_content"
+		    android:textSize="13sp"
+		    />
+		<EditText 
+		    android:id="@+id/et_advice_input_email"
+		    android:layout_width="match_parent"
+		    android:layout_height="35dip"
+		    android:padding="5dip"
+		    android:layout_marginTop="20dip"
+		    android:background="@drawable/shape_center_white_gray"
+		    android:layout_marginLeft="10dip"
+		    android:layout_marginRight="10dip"
+		    android:layout_below="@id/et_advice_input"
+		    android:inputType="textEmailAddress"
+		    android:hint="@string/setting_advice_email"
+		    android:textSize="13sp"
+		    />
+		
+        <Button
+            android:id="@+id/btn_setting_advice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/shape_button_orange"
+            android:text="@string/setting_advice_btn"
+            android:textColor="@color/txt_white" />
+    </RelativeLayout>
+
+</LinearLayout>

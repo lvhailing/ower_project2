@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/r_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/lin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+         >
+
+        <TextView
+            android:id="@+id/group_menu1_passfile1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:text="item222"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+        <com.cf360.view.MygridVeiw
+            android:id="@+id/saixungridview" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group_menu1_passfile1"
+            android:numColumns="3"
+            android:verticalSpacing="15dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:stretchMode="columnWidth"
+             >
+            
+        </com.cf360.view.MygridVeiw>
+    </RelativeLayout>
+
+</RelativeLayout>

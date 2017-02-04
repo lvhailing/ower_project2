@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/low_gray" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/changepwd_old"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:paddingLeft="10dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:hint="@string/changepwd_old"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/changepwd_new"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:paddingLeft="10dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:hint="@string/changepwd_new"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/changepwd_new2"
+            style="@style/WidgetDirver"
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:paddingLeft="10dip"
+            android:background="@drawable/shape_center_white_gray"
+            android:hint="@string/changepwd_new2"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/changepwd_ok"
+        style="@style/WidgetDirver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        android:background="@drawable/shape_button"
+        android:text="@string/btn_find_pw"
+        android:textColor="@color/txt_white" />
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/r_main"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+     > 
+     
+   <LinearLayout 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       >
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资领域"
+            />
+         <GridView
+            android:id="@+id/saixungridview" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="15dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+             >
+            
+        </GridView>
+   </LinearLayout>
+   
+       <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资领域"
+            />
+         <com.cf360.view.MygridVeiw
+            android:id="@+id/saixungridview1" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="15dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+           android:numColumns="3"
+            android:stretchMode="columnWidth"
+             >
+            
+        </com.cf360.view.MygridVeiw>
+   </LinearLayout>
+   
+          <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资领域"
+            />
+         <GridView
+            android:id="@+id/saixungridview2" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="15dp"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+             >
+            
+        </GridView>
+   </LinearLayout>
+   
+             <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资领域"
+            />
+         <GridView
+            android:id="@+id/saixungridview3" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="15dp"
+            android:numColumns="3"
+            android:horizontalSpacing="15dp"
+            android:layout_marginLeft="15dp"
+            android:stretchMode="columnWidth"
+             >
+            
+        </GridView>
+   </LinearLayout>
+   
+   <RelativeLayout 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       >
+       <View
+        android:id="@+id/view"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CDC9C9" />
+
+    <Button
+        android:id="@+id/cancle"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#E8E8E8"
+        android:layout_below="@+id/view"
+        android:text="取消"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/Confirm"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/cancle"
+        android:layout_below="@+id/view"
+        android:background="#CD853F"
+        android:text="确定"
+        android:textColor="#ffffff" />
+    
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/cancle"
+        android:background="#ffffff" />
+       
+   </RelativeLayout>
+   </LinearLayout>
+   
+   
+</RelativeLayout>

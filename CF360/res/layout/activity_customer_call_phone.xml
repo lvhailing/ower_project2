@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dip"
+    android:background="@color/white"
+     >
+
+    
+    <TextView 
+        android:id="@+id/tv_customer_beizhu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:text=""
+        android:textSize="22sp"
+        android:textColor="@color/orange"
+        />
+    <TextView 
+        android:id="@+id/tv_customer_call_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_customer_beizhu_title"
+        android:background="@drawable/button_grad_orager_sms"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:padding="10dip"
+        android:text="xuweiwei:1501254221"
+        android:textColor="@drawable/button_while_black_selector"
+        android:textSize="18sp"
+        android:gravity="center"
+        />
+    <TextView 
+        android:id="@+id/tv_customer_call_phone_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_customer_call_phone_number"
+        android:background="@drawable/button_grad_orager_sms"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:padding="10dip"
+        android:text="取消"
+        android:textColor="@drawable/button_while_black_selector"
+        android:textSize="18sp"
+        android:gravity="center"
+        />
+	    
+
+</RelativeLayout>

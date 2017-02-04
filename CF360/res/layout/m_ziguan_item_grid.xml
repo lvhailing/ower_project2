@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/r_gridview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+        
+          <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#dedcd2"
+        android:padding="1dp"
+         >
+
+        <TextView
+            android:id="@+id/ZiGuan_Datails_one_item"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="haha"
+             />
+
+        <TextView
+            android:id="@+id/ZiGuan_Datails_two_item"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="haha"
+            android:layout_marginLeft="0.5dp"
+            android:textColor="#333"
+            />
+
+        <TextView
+            android:id="@+id/ZiGuan_Datails_three_item"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:layout_marginLeft="0.5dp"
+            android:gravity="center"
+            android:text="haha"
+             />
+    </LinearLayout>
+</RelativeLayout>

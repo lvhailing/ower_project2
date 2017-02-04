@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/TrustDetails_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/m_content_btn_bg" >
+               <LinearLayout 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   >
+                    <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_xintuo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    
+                   />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="信托"
+                    android:textSize="21sp"
+                    android:textColor="@color/orange"
+                    />
+               </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/zhiguan_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                 android:layout_weight="1"
+               android:clickable="true"
+                android:background="@drawable/m_content_btn_bg" >
+               <LinearLayout 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   >
+                    <ImageView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_ziguan"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="资管"
+                    android:textSize="21sp"
+                    android:textColor="@color/orange"
+                    />
+               </LinearLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+        <View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#CDCDC1"
+    />
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/Sunshine_shimu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+               android:clickable="true"
+                android:background="@drawable/m_content_btn_bg" >
+               <LinearLayout 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   >
+                    <ImageView 
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img_yangguang"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="阳光私募"
+                    android:textSize="21sp"
+                    android:textColor="@color/orange"
+                    />
+               </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Equity_four"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                 android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/m_content_btn_bg" >
+               <LinearLayout 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   >
+                    <ImageView 
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img_shimu"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="私募股权"
+                    android:textSize="21sp"
+                    android:textColor="@color/orange"
+                    />
+               </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+          <View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#CDCDC1"
+    />
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/Insurance_five"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/m_content_btn_bg" >
+               <LinearLayout 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   >
+                    <ImageView 
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img_baoxian"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="保险"
+                    android:textSize="21sp"
+                    android:textColor="@color/orange"
+                    />
+               </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                 android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/m_content_btn_bg" >
+               <LinearLayout 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   android:orientation="vertical"
+                   >
+                    <ImageView 
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/img_gengduo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="敬请期待"
+                    android:textSize="21sp"
+                    android:textColor="#999"
+                    />
+               </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+<View 
+    android:layout_width="1dp"
+    android:layout_height="match_parent"
+    android:background="#CDCDC1"
+    />
+<View 
+    android:layout_width="1dp"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="#CDCDC1"
+    />
+<View 
+    android:layout_width="1dp"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:background="#CDCDC1"
+    />
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#CDCDC1"
+    />
+<View 
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#CDCDC1"
+    android:layout_alignParentBottom="true"
+    />
+
+</RelativeLayout>
