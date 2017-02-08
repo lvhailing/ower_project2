@@ -18,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+/**
+ * 首页热销产品 Adapter 类
+ */
 public class HotProductAdapter extends BaseAdapter {
     private static final String tag = "HotProductAdapter";
     private MouldList<ResultHotProductContentBean> list;

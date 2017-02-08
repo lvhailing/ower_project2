@@ -106,6 +106,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
     private LinearLayout ll_home_product_name_trustxt, ll_home_product_name_trustzg, ll_home_product_name_trustygsm, ll_home_product_name_trustsmgq, ll_home_product_name_bx;
 
     private ImageLoader imageLoader = ImageLoader.getInstance();
+    private WindowManager.LayoutParams wl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -123,7 +124,6 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
     }
 
     private void initView() {
-
         lv_home_product_trustxt = (MyListView) findViewById(R.id.lv_home_product_trustxt);
         lv_home_product_trustzg = (MyListView) findViewById(R.id.lv_home_product_trustzg);
         lv_home_product_trustygsm = (MyListView) findViewById(R.id.lv_home_product_trustygsm);
@@ -228,9 +228,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
                         PreferenceUtil.setAuditStatus(null);
                     }
                     if (hotProductBean != null) {
-
                         HotProductAdapter hotAdapter = new HotProductAdapter(MainActivity.this, hotProductBean, options);
-
                         lv.setAdapter(hotAdapter);
                         lv.setOnItemClickListener(new OnItemClickListener() {
                             @Override
@@ -718,7 +716,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
 
     private ReceiveBroadCast receiveBroadCast; // 广播实例
     String myActionName = "vjinkeexit";
-    private WindowManager.LayoutParams wl;
+
 
     // 注册广播
     public void registerBoradcastReceiver() {
