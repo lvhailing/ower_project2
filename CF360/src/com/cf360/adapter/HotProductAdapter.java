@@ -86,7 +86,8 @@ public class HotProductAdapter extends BaseAdapter {
             holder = (Holder) convertView.getTag();
         }
 
-        if (TextUtils.isEmpty(list.get(position).getSELLINGSTATUS())) {
+        //判断产品销售状态：包销，热销，推荐
+       /* if (TextUtils.isEmpty(list.get(position).getSELLINGSTATUS())) {
             holder.rl_product_hottype.setVisibility(View.GONE);
         } else {
             if (list.get(position).getSELLINGSTATUS().equals("热销")) {
@@ -94,21 +95,32 @@ public class HotProductAdapter extends BaseAdapter {
             } else {
                 holder.rl_product_hottype.setVisibility(View.GONE);
             }
+        }*/
+        String status = list.get(position).getSELLINGSTATUS();
+        if (!TextUtils.isEmpty(status) && status.equals("热销")) {
+            holder.rl_product_hottype.setVisibility(View.VISIBLE);
+        } else {
+            holder.rl_product_hottype.setVisibility(View.GONE);
         }
 
-        if (TextUtils.isEmpty(list.get(position).getRECOMMENDSTATUS())) {
+        //判断 “推荐” 标签是否显示（ 0  表示不显示，1 显示）
+       /* if (TextUtils.isEmpty(list.get(position).getRECOMMENDSTATUS())) {
             holder.rl_product_recommendtype.setVisibility(View.GONE);
         } else {
             if (list.get(position).getRECOMMENDSTATUS().equals("0")) {
                 holder.rl_product_recommendtype.setVisibility(View.GONE);
-
             } else if (list.get(position).getRECOMMENDSTATUS().equals("1")) {
-
                 holder.rl_product_recommendtype.setVisibility(View.VISIBLE);
             }
+        }*/
+        String recommendstatus = list.get(position).getRECOMMENDSTATUS();
+        if (!TextUtils.isEmpty(recommendstatus) && !(recommendstatus.equals("0"))) {
+            holder.rl_product_recommendtype.setVisibility(View.VISIBLE);
+        } else {
+            holder.rl_product_recommendtype.setVisibility(View.GONE);
         }
 
-        if (TextUtils.isEmpty(list.get(position).getSALETYPE())) {
+       /* if (TextUtils.isEmpty(list.get(position).getSALETYPE())) {
 
         } else {
             holder.rl_product_saletype.setVisibility(View.VISIBLE);
@@ -119,7 +131,16 @@ public class HotProductAdapter extends BaseAdapter {
             } else {
                 holder.rl_product_saletype.setVisibility(View.GONE);
             }
-
+        }*/
+        if (!TextUtils.isEmpty(list.get(position).getSALETYPE())) {
+            holder.rl_product_saletype.setVisibility(View.VISIBLE);
+            if (list.get(position).getSALETYPE().equals("包销")) {
+                holder.tv_product_saletype.setText("包销");
+            } else if (list.get(position).getSALETYPE().equals("分销")) {
+                holder.tv_product_saletype.setText("分销");
+            }
+        } else {
+            holder.rl_product_saletype.setVisibility(View.GONE);
         }
 
         holder.tv_hotproduct_title_content.setText(list.get(position).getNAME());

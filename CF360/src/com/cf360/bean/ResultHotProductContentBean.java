@@ -7,7 +7,7 @@ public class ResultHotProductContentBean implements IMouldType {
     private String ID;            //产品编号
     private String NAME;            //产品名称
     private String SALETYPE;    //销售方式（包销/分销）
-    private String SELLINGSTATUS;//热销
+    private String SELLINGSTATUS;//销售状态(包销，热销,推荐)
     private String PHOTOSATTACHMENTS;    //图片地址
     private String CATEGORY;        //产品类型   信托、资管、ygsm、smgq、1、2、3、4、5、6、7、8
     private String CREDITLEVEL;            //信用等级
@@ -19,7 +19,7 @@ public class ResultHotProductContentBean implements IMouldType {
     private String NAME5KEY;    //前端返佣，后端返佣，返佣比例对应的值
     private String RECRUITMENTPROCESS;    //进度条数据
     private String ISSHOW;        //进度条书名true/false
-    private String RECOMMENDSTATUS;  //推荐 0  表示不显示，1 显示
+    private String RECOMMENDSTATUS;  //推荐   0  表示不显示，1 显示
     private String auditStatus;  //是否认证
 
     public String getAuditStatus() {

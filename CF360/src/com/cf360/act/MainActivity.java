@@ -289,7 +289,6 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
         HtmlRequest.getMyMessageCount(MainActivity.this, Mobile, new OnRequestListener() {
             @Override
             public void onRequestFinished(BaseParams params) {
-
                 ResultMyMessageCountContentBean bean = (ResultMyMessageCountContentBean) params.result;
                 if (bean != null) {
                     if (bean.getUnReadyCount().equals("0")) {
@@ -297,11 +296,8 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
                     } else {
                         id_iv_right.setText(bean.getUnReadyCount());
                     }
-
                 } else {
-
                 }
-
             }
         });
     }

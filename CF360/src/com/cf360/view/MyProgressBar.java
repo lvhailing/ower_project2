@@ -32,7 +32,6 @@ public class MyProgressBar extends ProgressBar {
 
 	@Override
 	public synchronized void setProgress(int progress) {
-		// TODO Auto-generated method stub
 		setText(progress);
 		super.setProgress(progress);
 
@@ -40,7 +39,6 @@ public class MyProgressBar extends ProgressBar {
 
 	@Override
 	protected synchronized void onDraw(Canvas canvas) {
-		// TODO Auto-generated method stub
 		super.onDraw(canvas);
 		// this.setText();
 		Rect rect = new Rect();
