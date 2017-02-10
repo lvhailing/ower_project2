@@ -114,12 +114,13 @@ public class HotProductAdapter extends BaseAdapter {
             }
         }*/
         String recommendstatus = list.get(position).getRECOMMENDSTATUS();
-        if (!TextUtils.isEmpty(recommendstatus) && !(recommendstatus.equals("0"))) {
+        if (!TextUtils.isEmpty(recommendstatus) && !recommendstatus.equals("0")) {
             holder.rl_product_recommendtype.setVisibility(View.VISIBLE);
         } else {
             holder.rl_product_recommendtype.setVisibility(View.GONE);
         }
 
+        //判断销售方式（包销/分销）
        /* if (TextUtils.isEmpty(list.get(position).getSALETYPE())) {
 
         } else {
@@ -132,11 +133,12 @@ public class HotProductAdapter extends BaseAdapter {
                 holder.rl_product_saletype.setVisibility(View.GONE);
             }
         }*/
-        if (!TextUtils.isEmpty(list.get(position).getSALETYPE())) {
+        String saletype = list.get(position).getSALETYPE();
+        if (!TextUtils.isEmpty(saletype)) {
             holder.rl_product_saletype.setVisibility(View.VISIBLE);
-            if (list.get(position).getSALETYPE().equals("包销")) {
+            if (saletype.equals("包销")) {
                 holder.tv_product_saletype.setText("包销");
-            } else if (list.get(position).getSALETYPE().equals("分销")) {
+            } else if (saletype.equals("分销")) {
                 holder.tv_product_saletype.setText("分销");
             }
         } else {
@@ -155,51 +157,53 @@ public class HotProductAdapter extends BaseAdapter {
 //		LayoutParams para;
 //		para = holder.iv_hot_product_creditlevel.getLayoutParams();
 
-        if (!TextUtils.isEmpty(list.get(position).getCREDITLEVEL()) && (list.get(position).getCATEGORY().equals("信托") || list.get(position).getCATEGORY().equals("资管"))) {
+        String creditlevel = list.get(position).getCREDITLEVEL(); //信用等级
+        String category = list.get(position).getCATEGORY(); //产品类型
+        if (!TextUtils.isEmpty(creditlevel) && (category.equals("信托") || category.equals("资管"))) {
             holder.iv_hot_product_creditlevel.setVisibility(View.VISIBLE);
-            if (list.get(position).getCREDITLEVEL().equals("11")) {
+            if (creditlevel.equals("11")) {
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.VISIBLE);
 //				holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_d);
                 holder.iv_hot_product_creditlevel.setVisibility(View.GONE);
 //				para.width = 120;
 //				para.height = 40;
-            } else if (list.get(position).getCREDITLEVEL().equals("1")) {
+            } else if (creditlevel.equals("1")) { //当信托等级等于1时，显示图片“不限”
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_no);
-                holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
+                holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE); // “无评级” 隐藏
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("2")) {
+            } else if (creditlevel.equals("2")) { //当信托等级等于2时，显示图片3A
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_aaa);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("3")) {
+            } else if (creditlevel.equals("3")) { //当信托等级等于3时，显示图片2A
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_aa);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("4")) {
+            } else if (creditlevel.equals("4")) {  //当信托等级等于4时，显示图片1A
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_a);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("5")) {
+            } else if (creditlevel.equals("5")) {  //当信托等级等于5时，显示图片3B
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_bbb);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("6")) {
+            } else if (creditlevel.equals("6")) { //当信托等级等于6时，显示图片2B
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_bb);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("7")) {
+            } else if (creditlevel.equals("7")) { //当信托等级等于7时，显示图片1B
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_b);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("8")) {
+            } else if (creditlevel.equals("8")) { //当信托等级等于8时，显示图片3C
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_ccc);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("9")) {
+            } else if (creditlevel.equals("9")) { //当信托等级等于9时，显示图片2C
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_cc);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
-            } else if (list.get(position).getCREDITLEVEL().equals("10")) {
+            } else if (creditlevel.equals("10")) { //当信托等级等于10时，显示图片1C
                 holder.iv_hot_product_creditlevel.setImageResource(R.drawable.img_c);
                 holder.iv_hot_product_creditlevel_text.setVisibility(View.GONE);
 //				para.width = 80;
@@ -211,13 +215,13 @@ public class HotProductAdapter extends BaseAdapter {
         } else {
             holder.iv_hot_product_creditlevel.setVisibility(View.GONE);
         }
-        holder.tv_prodeuct_hot_content_first_two.setText(list.get(position).getNAME3());
-        holder.tv_prodeuct_hot_content_first_one.setText(list.get(position).getNAME3KEY());
-        holder.tv_prodeuct_hot_content_Second_two.setText(list.get(position).getNAME4());
+        holder.tv_prodeuct_hot_content_first_two.setText(list.get(position).getNAME3()); //认购金额，保险公司
+        holder.tv_prodeuct_hot_content_first_one.setText(list.get(position).getNAME3KEY()); //认购金额(保险公司)对应的值
+        holder.tv_prodeuct_hot_content_Second_two.setText(list.get(position).getNAME4()); //产品期限，累计净值，投资期限，保险期间
         if (TextUtils.isEmpty(list.get(position).getNAME4KEY())) {
             holder.tv_prodeuct_hot_content_Second_one.setText("--");
         } else {
-            holder.tv_prodeuct_hot_content_Second_one.setText(list.get(position).getNAME4KEY());
+            holder.tv_prodeuct_hot_content_Second_one.setText(list.get(position).getNAME4KEY()); //产品期限，累计净值，投资期限，保险期间对应的值
         }
         holder.tv_product_hot_content_Third_two.setText(list.get(position).getNAME5());
 
@@ -225,7 +229,7 @@ public class HotProductAdapter extends BaseAdapter {
             holder.tv_product_hot_content_Third_one.setText("认证可见");
         } else {
             if (PreferenceUtil.isAuditStatus().equals("success")) {
-                holder.tv_product_hot_content_Third_one.setText(list.get(position).getNAME5KEY());
+                holder.tv_product_hot_content_Third_one.setText(list.get(position).getNAME5KEY()); //前端返佣，后端返佣，返佣比例对应的值
             } else {
                 holder.tv_product_hot_content_Third_one.setText("认证可见");
             }
@@ -233,7 +237,7 @@ public class HotProductAdapter extends BaseAdapter {
 
         if (list.get(position).getISSHOW().equals("true")) {
             holder.mypb_hotproduct_ProgressBar.setVisibility(View.VISIBLE);
-            String progress = list.get(position).getRECRUITMENTPROCESS();
+            String progress = list.get(position).getRECRUITMENTPROCESS(); //进度条数据
             int progressInt = (int) (Double.parseDouble(progress) * 100);
             holder.mypb_hotproduct_ProgressBar.setProgress(progressInt);
             holder.mypb_hotproduct_ProgressBar.initText(15);

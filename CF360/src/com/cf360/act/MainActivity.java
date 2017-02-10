@@ -93,7 +93,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
     private DisplayImageOptions options;
     private Resources mResource;
     private int productPage = 1;
-    private Button btn_hot, btn_recommend;
+    private Button btn_hot, btn_recommend; //热销产品，推荐产品
     private TextView txt_trust, txt_management, txt_private_placement, txt_all, id_iv_right;
 
     private ArrayList<ImageBean> images;
@@ -163,6 +163,48 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
 
     }
 
+    private void initLeftMenu() {
+        SlidingMenu menu = getSlidingMenu();
+        menu.setMenu(R.layout.left_menu_frame);
+
+        Fragment leftMenuFragment = new MenuLeftFragment();
+//		setBehindContentView(R.layout.left_menu_frame);
+        getSupportFragmentManager().beginTransaction().replace(R.id.id_left_menu_frame, leftMenuFragment).commit();
+
+        menu.setMode(SlidingMenu.LEFT);
+        // 设置触摸屏幕的模式
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+
+        menu.setShadowWidthRes(R.dimen.shadow_width);
+//		 menu.setShadowDrawable(R.color.white);
+        // 设置滑动菜单视图的宽度
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+        // menu.setBehindWidth()
+        // 设置渐入渐出效果的值
+        menu.setFadeDegree(0.9f);
+        menu.setSecondaryShadowDrawable(R.color.white);
+        menu.setShadowDrawable(R.drawable.left_shadow);
+
+        //设置滑动时拖拽效果
+        menu.setBehindScrollScale(0.0f);
+
+        menu.addIgnoredView(mViewpager);
+//		menu.addIgnoredView(scroll_main);
+        menu.setOnOpenedListener(new OnOpenedListener() {
+
+            @Override
+            public void onOpened() {
+//				menu.showMenu(false);
+            }
+        });
+        menu.setOnClosedListener(new OnClosedListener() {
+
+            @Override
+            public void onClosed() {
+//				menu.setTouchModeBehind(SlidingMenu.TOUCHMODE_FULLSCREEN);//菜单栏划回主屏幕
+            }
+        });
+    }
 
     private void initData() {
         images = new ArrayList<ImageBean>();
@@ -211,7 +253,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
 
     private MouldList<ResultHotProductContentBean> hotProductBean;
 
-    //热销
+    //热销产品
     public void requestHotProductData() {
         HtmlRequest.getHotProduct(MainActivity.this, new OnRequestListener() {
 
@@ -513,50 +555,6 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
         }
 //		getSlidingMenu().clearIgnoredViews();
     }
-
-    private void initLeftMenu() {
-        SlidingMenu menu = getSlidingMenu();
-        menu.setMenu(R.layout.left_menu_frame);
-
-        Fragment leftMenuFragment = new MenuLeftFragment();
-//		setBehindContentView(R.layout.left_menu_frame);
-        getSupportFragmentManager().beginTransaction().replace(R.id.id_left_menu_frame, leftMenuFragment).commit();
-
-        menu.setMode(SlidingMenu.LEFT);
-        // 设置触摸屏幕的模式
-        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-
-        menu.setShadowWidthRes(R.dimen.shadow_width);
-//		 menu.setShadowDrawable(R.color.white);
-        // 设置滑动菜单视图的宽度
-        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
-        // menu.setBehindWidth()
-        // 设置渐入渐出效果的值
-        menu.setFadeDegree(0.9f);
-        menu.setSecondaryShadowDrawable(R.color.white);
-        menu.setShadowDrawable(R.drawable.left_shadow);
-
-        //设置滑动时拖拽效果
-        menu.setBehindScrollScale(0.0f);
-
-        menu.addIgnoredView(mViewpager);
-//		menu.addIgnoredView(scroll_main);
-        menu.setOnOpenedListener(new OnOpenedListener() {
-
-            @Override
-            public void onOpened() {
-//				menu.showMenu(false);
-            }
-        });
-        menu.setOnClosedListener(new OnClosedListener() {
-
-            @Override
-            public void onClosed() {
-//				menu.setTouchModeBehind(SlidingMenu.TOUCHMODE_FULLSCREEN);//菜单栏划回主屏幕
-            }
-        });
-    }
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

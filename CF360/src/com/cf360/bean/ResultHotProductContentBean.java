@@ -10,7 +10,7 @@ public class ResultHotProductContentBean implements IMouldType {
     private String SELLINGSTATUS;//销售状态(包销，热销,推荐)
     private String PHOTOSATTACHMENTS;    //图片地址
     private String CATEGORY;        //产品类型   信托、资管、ygsm、smgq、1、2、3、4、5、6、7、8
-    private String CREDITLEVEL;            //信用等级
+    private String CREDITLEVEL;    //信用等级
     private String NAME3;        //认购金额，保险公司
     private String NAME3KEY;        //认购金额(保险公司)对应的值
     private String NAME4;        //产品期限，累计净值，投资期限，保险期间
