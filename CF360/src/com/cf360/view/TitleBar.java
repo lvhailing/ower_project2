@@ -301,8 +301,9 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
     /**
      * 刷新一个已有的右边的按钮 (加1或减1) 参考图片选择时的
      *
-     * @param text
+     * @param isIncrement
      * @param id
+     * @param context
      */
     public void refreshRightBtn(boolean isIncrement, int id, Context context) {
         if (badgeRightbtn != null) {
@@ -336,8 +337,8 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
     /**
      * 在标题栏中删除一个可点击的button
      *
-     * @param boolean 是否显示 Action 具体的哪一个action
-     * @return
+     * @param b        是否显示 Action 具体的哪一个action
+     * @param actionId
      */
     public void setShowAction(boolean b, int actionId) {
 
@@ -410,7 +411,7 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
         if (titleMenuWindow == null) {
             titleMenuWindow = new StickItemWindow((View) getParent(), more);
             menuList = new ListView(mContext);
-            menuList.setCacheColorHint(R.color.transparent);// 去掉ListView的模糊边缘
+            menuList.setCacheColorHint(getResources().getColor(R.color.transparent));// 去掉ListView的模糊边缘
             menuList.setDivider(new ColorDrawable(0xff888888));
             menuList.setDividerHeight(1);
             menuList.setAdapter(mTitleAdapter);
@@ -602,7 +603,7 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
     /**
      * 设置标题的响应
      *
-     * @param string
+     * @param isSet
      * @return
      */
     public TitleBar setTitleMenuListenter(boolean isSet) {
@@ -615,7 +616,7 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
     /**
      * 设置标题的右侧的图标
      *
-     * @param string
+     * @param drawable
      * @return
      */
     public TitleBar setTitleRigterIcon(int drawable) {
@@ -626,7 +627,7 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
     /***
      * 设置菜单右侧红点
      *
-     * @param position
+     * @param isShown
      * @return
      */
     public void setMenuRedPoint(boolean isShown) {

@@ -80,7 +80,7 @@ public class ExpandTabView extends LinearLayout implements OnDismissListener {
 		for (int i = 0; i < viewArray.size(); i++) {
 			final RelativeLayout r = new RelativeLayout(mContext);
 			int maxHeight = (int) (displayHeight * 0.7);
-			RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, maxHeight);
+			RelativeLayout.LayoutParams rl = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, maxHeight);
 			r.addView(viewArray.get(i), rl);
 			mViewArray.add(r);
 			r.setTag(SMALL);
@@ -125,7 +125,6 @@ public class ExpandTabView extends LinearLayout implements OnDismissListener {
 	}
 
 	private void startAnimation() {
-
 		if (popupWindow == null) {
 			popupWindow = new PopupWindow(mViewArray.get(selectPosition), displayWidth, displayHeight);
 			popupWindow.setAnimationStyle(R.style.PopupWindowAnimation);

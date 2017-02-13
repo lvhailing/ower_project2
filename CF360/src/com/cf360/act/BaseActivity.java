@@ -37,104 +37,101 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class BaseActivity extends AbsBaseActivity implements NetListener {
+    private TitleBar title;
+    // private MyProgressDialog progressDialog;
+    private CustomProgressDialog dialog;
 
-	private TitleBar title;
-	// private MyProgressDialog progressDialog;
-	private CustomProgressDialog dialog;
-
-	public LinearLayout llContent;
-	public Button btn_net_fail_refresh;
-	public boolean netFail = true;
-	public boolean netFail_2 = true;			//控制不需要网络异常页面activity
-	public View netHint_2;
-	private View netHint;
-	private ActivityStack stack;
-	private Timer timer;
-	private ResultIsLoginContentBean data;
-
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.base);
-		stack = ActivityStack.getActivityManage();
-		netHint = findViewById(R.id.netfail_hint);
-		netHint_2 = findViewById(R.id.netfail_hint_2);
-		btn_net_fail_refresh = (Button) netHint_2.findViewById(R.id.btn_net_fail_refresh);
-		data = new ResultIsLoginContentBean();
-		VjinkeApplication apl = (VjinkeApplication) getApplicationContext();
-		apl.registReceiver();
-
-	}
-	int i_num = 0;
-	public void timer1() {
+    public LinearLayout llContent;
+    public Button btn_net_fail_refresh; //重新加载按钮
+    public boolean netFail = true;
+    public boolean netFail_2 = true;            //控制不需要网络异常页面activity
+    private View netHint; //网络加载失败，显示的布局1
+    public View netHint_2; //网络加载失败，显示的布局2
+    private ActivityStack stack;
+    private Timer timer;
+    private ResultIsLoginContentBean data;
 
 
-		timer = new Timer();
-		timer.schedule(new TimerTask() {
-			public void run() {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.base);
+        stack = ActivityStack.getActivityManage();
+        netHint = findViewById(R.id.netfail_hint);
+        netHint_2 = findViewById(R.id.netfail_hint_2);
+        btn_net_fail_refresh = (Button) netHint_2.findViewById(R.id.btn_net_fail_refresh);
+        data = new ResultIsLoginContentBean();
+        VjinkeApplication apl = (VjinkeApplication) getApplicationContext();
+        apl.registReceiver();
 
-				if (PreferenceUtil.isLogin()) {
+    }
+
+    int i_num = 0;
+
+    public void timer1() {
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            public void run() {
+
+                if (PreferenceUtil.isLogin()) {
 //					System.out.println("BaseActivity" + i_num);
-					Log.e("BaseActivity", "i_num" + i_num++);
-					//requestMyAccountData();
-					requestIsLogin();
-				}
+                    Log.e("BaseActivity", "i_num" + i_num++);
+                    //requestMyAccountData();
+                    requestIsLogin();
+                }
 
-			}
-		}, 2000);// 设定指定的时间time,此处为2000毫秒
+            }
+        }, 2000);// 设定指定的时间time,此处为2000毫秒
 
-	}
+    }
 
 
-	//是否登录
-	public  void requestIsLogin(){
+    //是否登录
+    public void requestIsLogin() {
+        String userId = null;
+        try {
+            userId = DESUtil.decrypt(PreferenceUtil.getUserId());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-		String userId = null;
-		try {
-			userId = DESUtil.decrypt(PreferenceUtil.getUserId());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+        String token = null;
+        try {
+            token = DESUtil.decrypt(PreferenceUtil.getToken());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-		String token = null;
-		try {
-			token = DESUtil.decrypt(PreferenceUtil.getToken());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+        HtmlRequest.getIsLogin(this, userId, token, new BaseRequester.OnRequestListener() {
+            @Override
+            public void onRequestFinished(BaseParams params) {
+                data = (ResultIsLoginContentBean) params.result;
+                if (data != null) {
+                    if (data.getFlag().equals("false")) {
+                        if (PreferenceUtil.isLogin()) {
 
-		HtmlRequest.getIsLogin(this,userId,token,
-				new BaseRequester.OnRequestListener() {
-					@Override
-					public void onRequestFinished(BaseParams params) {
-						data = (ResultIsLoginContentBean) params.result;
-						if (data != null) {
-							if (data.getFlag().equals("false")) {
-								if (PreferenceUtil.isLogin()) {
-
-									dialog2(BaseActivity.this);
+                            dialog2(BaseActivity.this);
 
 //									stack.removeAllActivityExceptOne("MainActivity");
 //									Toast.makeText(BaseActivity.this,"登录信息有误，请重新登录", Toast.LENGTH_LONG).show();
-								}
-								PreferenceUtil.setAutoLoginAccount("");
-								PreferenceUtil.setAutoLoginPwd("");
-								PreferenceUtil.setLogin(false);
-								PreferenceUtil.setPhone("");
-								PreferenceUtil.setUserId("");
-								PreferenceUtil.setUserNickName("");
+                        }
+                        PreferenceUtil.setAutoLoginAccount("");
+                        PreferenceUtil.setAutoLoginPwd("");
+                        PreferenceUtil.setLogin(false);
+                        PreferenceUtil.setPhone("");
+                        PreferenceUtil.setUserId("");
+                        PreferenceUtil.setUserNickName("");
 //								PreferenceUtil.setCookie("");
 
-								// i.putExtra("result", "exit");
-								// setResult(9, i);
-								Intent tent = new Intent("vjinkeexit");// 广播的标签，一定要和需要接受的一致。
-								tent.putExtra("result", "exit");
-								BaseActivity.this.sendBroadcast(tent);// 发送广播
-							} else {
-							}
-						} else {
+                        // i.putExtra("result", "exit");
+                        // setResult(9, i);
+                        Intent tent = new Intent("vjinkeexit");// 广播的标签，一定要和需要接受的一致。
+                        tent.putExtra("result", "exit");
+                        BaseActivity.this.sendBroadcast(tent);// 发送广播
+                    } else {
+                    }
+                } else {
 
 							/*if (PreferenceUtil.isLogin()) {
 
@@ -159,123 +156,125 @@ public class BaseActivity extends AbsBaseActivity implements NetListener {
 //							i.setClass(context, LoginActivity.class);
 //							context.startActivity(i);
 //							setView();*/
-						}
-						timer1();
-					}
-				});
-	}
-	public void baseSetContentView(int layoutResId) {
-		llContent = (LinearLayout) findViewById(R.id.content);
-		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		// progressDialog = new MyProgressDialog(BaseActivity.this);
-		// progressDialog.setMessage(getResources().getString(
-		// R.string.order_load_toast));
-		// progressDialog.setCanceledOnTouchOutside(false);
-		dialog = new CustomProgressDialog(this, "", R.anim.frame_loading);
-		View v = inflater.inflate(layoutResId, null);
-		llContent.addView(v);
-	}
+                }
+                timer1();
+            }
+        });
+    }
 
-	public void startLoading() {
-		if (dialog != null && !dialog.isShowing()) {
-			dialog.show();
-		}
-	}
+    public void baseSetContentView(int layoutResId) {
+        llContent = (LinearLayout) findViewById(R.id.content);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        // progressDialog = new MyProgressDialog(BaseActivity.this);
+        // progressDialog.setMessage(getResources().getString(
+        // R.string.order_load_toast));
+        // progressDialog.setCanceledOnTouchOutside(false);
+        dialog = new CustomProgressDialog(this, "", R.anim.frame_loading);
+        View v = inflater.inflate(layoutResId, null);
+        llContent.addView(v);
+    }
 
-	public void stopLoading() {
-		if (dialog != null) {
-			dialog.dismiss();
-		}
-	}
+    public void startLoading() {
+        if (dialog != null && !dialog.isShowing()) {
+            dialog.show();
+        }
+    }
 
-	@Override
-	protected void onResume() {
-		super.onResume();
+    public void stopLoading() {
+        if (dialog != null) {
+            dialog.dismiss();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 //		timer1();
-		VjinkeApplication apl = (VjinkeApplication) getApplication();
-		apl.addNetListener(this);
-		onNetWorkChange(apl.netType);
-	}
+        VjinkeApplication apl = (VjinkeApplication) getApplication();
+        apl.addNetListener(this);
+        onNetWorkChange(apl.netType);
+    }
 
-	@Override
-	protected void onPause() {
-		super.onPause();
+    @Override
+    protected void onPause() {
+        super.onPause();
 //		timer.cancel();
-		VjinkeApplication apl = (VjinkeApplication) getApplication();
-		apl.removeNetListener(this);
-	}
+        VjinkeApplication apl = (VjinkeApplication) getApplication();
+        apl.removeNetListener(this);
+    }
 
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		VjinkeApplication apl = (VjinkeApplication) getApplicationContext();
-		apl.unRegisterNetListener();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        VjinkeApplication apl = (VjinkeApplication) getApplicationContext();
+        apl.unRegisterNetListener();
 
-	}
+    }
 
-	@Override
-	public void onNetWorkChange(String netType) {
-		// LayoutInflater inflater = (LayoutInflater) this
-		// .getSystemService(LAYOUT_INFLATER_SERVICE);
-		// View view = inflater.inflate(R.layout.net_fail, null);
-		// View netHint = view.findViewById(R.id.netfail_hint);
+    @Override
+    public void onNetWorkChange(String netType) {
+        // LayoutInflater inflater = (LayoutInflater) this
+        // .getSystemService(LAYOUT_INFLATER_SERVICE);
+        // View view = inflater.inflate(R.layout.net_fail, null);
+        // View netHint = view.findViewById(R.id.netfail_hint);
 
-		// Toast.makeText(BaseActivity.this, "=", Toast.LENGTH_SHORT).show();
-		netHint.setOnClickListener(new OnClickListener() {
+        // Toast.makeText(BaseActivity.this, "=", Toast.LENGTH_SHORT).show();
+        netHint.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				// Toast.makeText(BaseActivity.this,
-				// "vjinke====================v===" + v.getId(),
-				// Toast.LENGTH_SHORT).show();
-				Intent intent = new Intent(Settings.ACTION_SETTINGS);
-				startActivity(intent);
-			}
-		});
+            @Override
+            public void onClick(View v) {
+                // Toast.makeText(BaseActivity.this,
+                // "vjinke====================v===" + v.getId(),
+                // Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Settings.ACTION_SETTINGS);
+                startActivity(intent);
+            }
+        });
 
-		if (netHint != null) {
-			netFail = TextUtils.isEmpty(netType);
-			netHint.setVisibility(netFail ? View.VISIBLE : View.GONE);
-			if(netFail_2&&netFail){
-				netHint_2.setVisibility(View.VISIBLE);
-				llContent.setVisibility(View.GONE);
-			}
+        if (netHint != null) {
+            netFail = TextUtils.isEmpty(netType);
+            netHint.setVisibility(netFail ? View.VISIBLE : View.GONE);
+            if (netFail_2 && netFail) {
+                netHint_2.setVisibility(View.VISIBLE);
+                llContent.setVisibility(View.GONE);
+            }
 //			netHint_2.setVisibility(netFail ? View.VISIBLE : View.GONE);
 //			llContent.setVisibility(netFail ? View.GONE : View.VISIBLE);
 
-			// netHint.setVisibility(View.VISIBLE);
+            // netHint.setVisibility(View.VISIBLE);
 
-			// Toast.makeText(BaseActivity.this,
-			// "vjinke====================netFail==="+netFail,
-			// Toast.LENGTH_SHORT).show();
-		}
-	}
-	private void dialog2(Context context) {
-		// dialog参数设置
-		AlertDialog.Builder builder = new AlertDialog.Builder(context); // 先得到构造器
-		builder.setTitle("提示"); // 设置标题
-		if(data!=null){
-			if(!TextUtils.isEmpty(data.getMessage())){
-				builder.setMessage(data.getMessage()); //设置内容
-			}else{
+            // Toast.makeText(BaseActivity.this,
+            // "vjinke====================netFail==="+netFail,
+            // Toast.LENGTH_SHORT).show();
+        }
+    }
 
-			}
-		}
+    private void dialog2(Context context) {
+        // dialog参数设置
+        AlertDialog.Builder builder = new AlertDialog.Builder(context); // 先得到构造器
+        builder.setTitle("提示"); // 设置标题
+        if (data != null) {
+            if (!TextUtils.isEmpty(data.getMessage())) {
+                builder.setMessage(data.getMessage()); //设置内容
+            } else {
 
-		// 设置列表显示，注意设置了列表显示就不要设置builder.setMessage()了，否则列表不起作用。
-		builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int i) {
-				dialog.dismiss();
+            }
+        }
 
-				stack.removeAllActivityExceptOne("MainActivity");
-			}
-		});
-		AlertDialog ad = builder.create();
+        // 设置列表显示，注意设置了列表显示就不要设置builder.setMessage()了，否则列表不起作用。
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                dialog.dismiss();
+
+                stack.removeAllActivityExceptOne("MainActivity");
+            }
+        });
+        AlertDialog ad = builder.create();
 //		builder.create().show();
-		ad.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
-		ad.setCanceledOnTouchOutside(false);
-		ad.show();
-	}
+        ad.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+        ad.setCanceledOnTouchOutside(false);
+        ad.show();
+    }
 
 }
