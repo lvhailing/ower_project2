@@ -1,145 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/r_main"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+                android:id="@+id/r_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
     <RelativeLayout
         android:id="@+id/linear_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp" >
+        android:layout_marginTop="15dp">
 
-        <LinearLayout
-            android:id="@+id/linear_one1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp" >
-
-            <TextView
-                android:id="@+id/xintuo_title_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:singleLine="true"
-                android:text="中融信托-兴创美林湖" />
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/xintuo_title_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/linear_one1"
-            android:orientation="horizontal" >
+            android:layout_marginTop="3dp"
+            android:singleLine="true"
+            android:text="中融信托-兴创美林湖"/>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/xintuo_title_content"
+            android:orientation="horizontal">
 
-                <RelativeLayout
-                    android:id="@+id/xintuo_type_Branch_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+            <Button
+                android:id="@+id/btn_xintuo_type_Branch"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:background="@drawable/shape_button_orange"
+                android:text="分销"
+                android:textColor="#ffffff"
+                android:textSize="9sp"/>
 
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="20dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/shape_button_orange" />
+            <Button
+                android:id="@+id/btn_xintuo_type_Include"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:background="@drawable/shape_button_orange"
+                android:text="包销"
+                android:textColor="#ffffff"
+                android:textSize="9sp"
+                android:visibility="gone"/>
 
-                    <TextView
-                        android:id="@+id/xintuo_type_Hot_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:textColor="#ffffff"
-                        android:text="分销"
-                        android:textSize="9sp" />
-                </RelativeLayout>
+            <Button
+                android:id="@+id/btn_xintuo_type_Hot"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_button_red"
+                android:text="热销"
+                android:textColor="#ffffff"
+                android:textSize="9sp"/>
 
-                <RelativeLayout
-                    android:id="@+id/xintuo_type_Include_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone" >
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="20dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/shape_button_orange" />
-
-                    <TextView
-                        android:id="@+id/xintuo_type_Include_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="包销"
-                        android:textColor="#ffffff"
-                        android:textSize="9sp" />
-                </RelativeLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/xintuo_type_Hot_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp" >
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="20dp"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/shape_button_red" />
-
-                <TextView
-                    android:id="@+id/xintuo_type_Branch_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="热销"
-                    android:textColor="#ffffff"
-                    android:textSize="9sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/xintuo_type_tuijian_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp" >
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="20dp"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/shape_center_blue" />
-
-                <TextView
-                    android:id="@+id/xintuo_type_tuijian_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="推荐"
-                    android:textColor="#ffffff"
-                    android:textSize="9sp" />
-            </RelativeLayout>
+            <Button
+                android:id="@+id/btn_xintuo_type_tuijian"
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shape_center_blue"
+                android:text="推荐"
+                android:textColor="#ffffff"
+                android:textSize="9sp"/>
         </LinearLayout>
 
-        <RelativeLayout
+
+        <ImageView
+            android:id="@+id/xintuo_type_image"
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="5dp"
             android:layout_marginTop="1dp"
-            android:gravity="center_horizontal" >
-
-            <ImageView
-                android:id="@+id/xintuo_type_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/img_a" />
-        </RelativeLayout>
+            android:background="@drawable/img_a"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -148,14 +83,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear_one"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
-        <LinearLayout style="@style/XinTuo_context_linear_Style" >
+        <LinearLayout style="@style/XinTuo_context_linear_Style">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/xintuo_content_first_one"
@@ -163,14 +98,14 @@
                     android:layout_height="wrap_content"
                     android:text="100"
                     android:textColor="#B85"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="万元"
                     android:textColor="#B85"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"/>
             </LinearLayout>
 
             <TextView
@@ -180,10 +115,10 @@
                 android:layout_marginTop="5dp"
                 android:text="认购金额"
                 android:textColor="#666"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
 
-        <LinearLayout style="@style/XinTuo_context_linear_Style" >
+        <LinearLayout style="@style/XinTuo_context_linear_Style">
 
             <TextView
                 android:id="@+id/xintuo_content_Second_one"
@@ -191,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:text="100"
                 android:textColor="#B85"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/xintuo_content_Second_two"
@@ -200,10 +135,10 @@
                 android:layout_marginTop="5dp"
                 android:text="产品期限"
                 android:textColor="#666"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
 
-        <LinearLayout style="@style/XinTuo_context_linear_Style" >
+        <LinearLayout style="@style/XinTuo_context_linear_Style">
 
             <TextView
                 android:id="@+id/xintuo_content_Third_one"
@@ -211,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:text="100万元起"
                 android:textColor="#B85"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/xintuo_content_Third_two"
@@ -220,7 +155,7 @@
                 android:layout_marginTop="5dp"
                 android:text="返佣比例"
                 android:textColor="#666"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -230,7 +165,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/linear_two"
         android:layout_marginTop="10dp"
-        android:gravity="center_horizontal" >
+        android:gravity="center_horizontal">
 
         <com.cf360.view.MyProgressBar
             android:id="@+id/xintuo_ProgressBar"
@@ -239,21 +174,16 @@
             android:layout_height="15dp"
             android:max="100"
             android:progress="40"
-            android:progressDrawable="@drawable/progressbar_color" />
+            android:progressDrawable="@drawable/progressbar_color"/>
     </RelativeLayout>
 
-    <RelativeLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="15dp"
-        android:layout_below="@id/relativebar" >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@color/light_gray" />
-    </RelativeLayout>
+        android:layout_height="1dp"
+        android:layout_below="@id/relativebar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/light_gray"/>
 
 </RelativeLayout>

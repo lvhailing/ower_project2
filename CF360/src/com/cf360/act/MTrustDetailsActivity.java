@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -45,7 +46,6 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
  *
  * @author hasee
  */
-
 public class MTrustDetailsActivity extends BaseActivity {
     private ExpandTabView expandTabView;
     private ArrayList<View> mViewArray = new ArrayList<View>();
@@ -55,10 +55,11 @@ public class MTrustDetailsActivity extends BaseActivity {
     private MouldList<ResultXinTuoListViewItem> resultListViewItem;
     private MyBaseAdapter myBaseAdapter;
 
-    private ArrayList<String> investmentFieldLst;
-    private ArrayList<String> issuerLst;
-    private ArrayList<String> commissionLst;
-    private ArrayList<String> annualRateLst;
+    //点击 “筛选”按钮 展开页面的数据模块
+    private ArrayList<String> investmentFieldLst; //投资领域数组
+    private ArrayList<String> issuerLst; //发行机构数组
+    private ArrayList<String> commissionLst; //佣金比例数组
+    private ArrayList<String> annualRateLst; //预期收益数组
 
     private ArrayList<String> investmentFieldLst_1 = null;
     private ArrayList<String> issuerLst_1 = null;
@@ -66,7 +67,7 @@ public class MTrustDetailsActivity extends BaseActivity {
     private ArrayList<String> annualRateLst_1 = null;
 
     private ResultXinTuoItemContentBean data;
-    private ArrayList<String> mTextArray;
+    private ArrayList<String> mTextArray; //排序、筛选 数组
     private int infoPage = 1;
     private String filterType = "0";
     private String SdefaultType;
@@ -109,9 +110,7 @@ public class MTrustDetailsActivity extends BaseActivity {
 
             @Override
             public void onMenu(int id) {
-
             }
-
         });
     }
 
@@ -161,7 +160,6 @@ public class MTrustDetailsActivity extends BaseActivity {
 
             @Override
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
-
                 if (refreshView.isHeaderShown()) {
                     if (filterType.equals("0")) {
                         if (infoPage >= 2) {
@@ -228,20 +226,12 @@ public class MTrustDetailsActivity extends BaseActivity {
 
         @Override
         public int getCount() {
-            if (resultListViewItem == null) {
-                return 0;
-            } else {
-                return resultListViewItem.size();
-            }
+            return resultListViewItem == null ? 0 : resultListViewItem.size();
         }
 
         @Override
         public Object getItem(int position) {
-            if (resultListViewItem == null) {
-                return null;
-            } else {
-                return this.resultListViewItem.get(position);
-            }
+            return resultListViewItem == null ? null : resultListViewItem.get(position);
         }
 
         @Override
@@ -256,17 +246,13 @@ public class MTrustDetailsActivity extends BaseActivity {
                 holder = new ViewHolder();
                 convertView = LayoutInflater.from(this.mContext).inflate(R.layout.m_item_xintuoadapter, null, false);
                 holder.Title_content_text = (TextView) convertView.findViewById(R.id.xintuo_title_content);
-                holder.Type_Hot_text = (TextView) convertView.findViewById(R.id.xintuo_type_Hot_text);
                 holder.ATypeImage = (ImageView) convertView.findViewById(R.id.xintuo_type_image);
-                holder.Type_Branch_text = (TextView) convertView.findViewById(R.id.xintuo_type_Branch_text);
-                holder.Type_Include_text = (TextView) convertView.findViewById(R.id.xintuo_type_Include_text);
-                holder.Type_Include_image = (RelativeLayout) convertView.findViewById(R.id.xintuo_type_Include_image);
-                holder.Type_Hot_image = (RelativeLayout) convertView.findViewById(R.id.xintuo_type_Hot_image);
-                holder.Type_Branch_image = (RelativeLayout) convertView.findViewById(R.id.xintuo_type_Branch_image);
+                holder.btn_xintuo_type_Include = (Button) convertView.findViewById(R.id.btn_xintuo_type_Include);
+                holder.btn_xintuo_type_Hot = (Button) convertView.findViewById(R.id.btn_xintuo_type_Hot);
+                holder.btn_xintuo_type_Branch = (Button) convertView.findViewById(R.id.btn_xintuo_type_Branch);
                 holder.Content_Money = (TextView) convertView.findViewById(R.id.xintuo_content_first_one);
                 holder.Content_Month = (TextView) convertView.findViewById(R.id.xintuo_content_Second_one);
-                holder.TypeTuijianImage = (RelativeLayout) convertView.findViewById(R.id.xintuo_type_tuijian_image);
-
+                holder.btn_xintuo_type_tuijian = (Button) convertView.findViewById(R.id.btn_xintuo_type_tuijian);
                 holder.Content_Proportion = (TextView) convertView.findViewById(R.id.xintuo_content_Third_one);
                 holder.mProgressBar = (MyProgressBar) convertView.findViewById(R.id.xintuo_ProgressBar);
                 convertView.setTag(holder);
@@ -299,41 +285,38 @@ public class MTrustDetailsActivity extends BaseActivity {
             holder.mProgressBar.setProgress(new Integer(resultListViewItem.get(position).getRecruitmentProcess()));
             if (resultListViewItem.get(position).getSaleType().equals("0")) {
                 // 包销
-                holder.Type_Branch_image.setVisibility(View.GONE);
-                holder.Type_Include_image.setVisibility(View.VISIBLE);// 包销
+                holder.btn_xintuo_type_Branch.setVisibility(View.GONE); //分销
+                holder.btn_xintuo_type_Include.setVisibility(View.VISIBLE);// 包销
             } else {
                 // 分销
-                holder.Type_Include_image.setVisibility(View.GONE);
-                holder.Type_Branch_image.setVisibility(View.VISIBLE);
+                holder.btn_xintuo_type_Include.setVisibility(View.GONE);
+                holder.btn_xintuo_type_Branch.setVisibility(View.VISIBLE);
             }
             // 是否热销
             if (resultListViewItem.get(position).getSellingStatus().equals("1")) {
-                holder.Type_Hot_image.setVisibility(View.VISIBLE);
+                holder.btn_xintuo_type_Hot.setVisibility(View.VISIBLE);
             } else {
-                holder.Type_Hot_image.setVisibility(View.GONE);
+                holder.btn_xintuo_type_Hot.setVisibility(View.GONE);
             }
             // 是否推荐
             if (resultListViewItem.get(position).getRecommendStatus().equals("1")) {
-                holder.TypeTuijianImage.setVisibility(View.VISIBLE);
+                holder.btn_xintuo_type_tuijian.setVisibility(View.VISIBLE);
             } else {
-                holder.TypeTuijianImage.setVisibility(View.GONE);
+                holder.btn_xintuo_type_tuijian.setVisibility(View.GONE);
             }
             return convertView;
         }
 
         private class ViewHolder {
             TextView Title_content_text;
-            TextView Type_Hot_text;
-            TextView Type_Branch_text;
-            TextView Type_Include_text;
-            RelativeLayout Type_Include_image;
-            RelativeLayout Type_Hot_image;
-            RelativeLayout Type_Branch_image;
+            Button btn_xintuo_type_Branch; //分销
+            Button btn_xintuo_type_Include; //包销
+            Button btn_xintuo_type_Hot; //热销
             TextView Content_Money;
             TextView Content_Month;
             TextView Content_Proportion;
             MyProgressBar mProgressBar;
-            RelativeLayout TypeTuijianImage;
+            Button btn_xintuo_type_tuijian;
             ImageView ATypeImage;
 
         }
@@ -350,7 +333,7 @@ public class MTrustDetailsActivity extends BaseActivity {
                     data = (ResultXinTuoItemContentBean) params.result;
                     // resultListViewItem = data.getTrustList();
                     if (data != null) {
-                        if (TextUtils.isEmpty(data.getAuditStatus())) {
+                        if (TextUtils.isEmpty(data.getAuditStatus())) { //判断用户是否认证;
                             PreferenceUtil.setAuditStatus(null);
                         } else {
                             PreferenceUtil.setAuditStatus(data.getAuditStatus());
