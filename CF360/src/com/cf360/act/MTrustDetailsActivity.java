@@ -69,7 +69,7 @@ public class MTrustDetailsActivity extends BaseActivity {
     private ResultXinTuoItemContentBean data;
     private ArrayList<String> mTextArray; //排序、筛选 数组
     private int infoPage = 1;
-    private String filterType = "0";
+    private String filterType = "0"; // 0代表排序，1筛选
     private String SdefaultType;
     private String commission;
     private String issuer;
@@ -135,7 +135,7 @@ public class MTrustDetailsActivity extends BaseActivity {
         viewLeft = new ViewLeft(this, arrayList);
         mListView = (PullToRefreshListView) findViewById(R.id.listview);
 
-        btn_net_fail_refresh.setOnClickListener(new OnClickListener() { //重新加载按钮 点击监听
+        btn_net_fail_refresh.setOnClickListener(new OnClickListener() { // “重新加载按钮” 的点击监听
             @Override
             public void onClick(View v) {
                 initView();
@@ -157,7 +157,6 @@ public class MTrustDetailsActivity extends BaseActivity {
         mListView.setAdapter(myBaseAdapter);
         mListView.setOnItemClickListener(new MyItemClickListener());
         mListView.setOnRefreshListener(new OnRefreshListener<ListView>() {
-
             @Override
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
                 if (refreshView.isHeaderShown()) {
@@ -201,7 +200,6 @@ public class MTrustDetailsActivity extends BaseActivity {
             intent.putExtra("availableAmount", availableAmount);
             intent.putExtra("creditLevel", creditLevel);
             startActivity(intent);
-
         }
 
     }
@@ -394,6 +392,7 @@ public class MTrustDetailsActivity extends BaseActivity {
         });
     }
 
+    //请求信托筛选数据
     private void requestSaiXuanData(String category, String defaultType, String filterType, int pageNo, String annualRate, String commission, String investmentField, String issuer) {
         HtmlRequest.xinSaiItemResult(MTrustDetailsActivity.this, category, defaultType, filterType, pageNo, annualRate, commission, investmentField, issuer, new OnRequestListener() {
             @Override
@@ -486,9 +485,7 @@ public class MTrustDetailsActivity extends BaseActivity {
     }
 
     private void initListener() {
-
         viewRight.setOnSelectListener(new ViewRight.OnSelectListener() {
-
             @Override
             public void getValue(String distance, String showText) {
             }
@@ -496,7 +493,6 @@ public class MTrustDetailsActivity extends BaseActivity {
             @Override
             public void getCancle() {
                 onBackPressed();
-
             }
 
             @Override

@@ -1996,7 +1996,6 @@ public class HtmlRequest extends BaseRequester {
             return null;
         }
         getTaskManager().addTask(new MouldAsyncTask(tid, buildParams(Constants.TASK_TYPE_GETADVERTISE, context, listener, url, 0)) {
-
             @Override
             public IMouldType doTask(BaseParams params) {
                 SimpleHttpClient client = new SimpleHttpClient(context, SimpleHttpClient.RESULT_STRING);

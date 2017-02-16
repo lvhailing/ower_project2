@@ -3,40 +3,41 @@ package com.cf360.bean;
 import android.graphics.Bitmap;
 
 public class ImageBean {
-	private String url;
-	private String picture;
-	private String description;
-	private Bitmap bitmap;
-	public String getPicture() {
-		return picture;
-	}
+    private String url;
+    private String picture;
+    private String description;
+    private Bitmap bitmap;
 
-	public void setPicture(String picture) {
-		this.picture = picture;
-	}
+    public String getPicture() {
+        return picture;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public String getUrl() {
-		return url;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+    public String getUrl() {
+        return url;
+    }
 
-	public Bitmap getBitmap() {
-		return bitmap;
-	}
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
-	public void setBitmap(Bitmap bitmap) {
-		this.bitmap = bitmap;
-	}
-	
+    public Bitmap getBitmap() {
+        return bitmap;
+    }
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
+    }
+
 }

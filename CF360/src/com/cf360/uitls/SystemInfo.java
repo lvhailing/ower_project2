@@ -65,8 +65,7 @@ public class SystemInfo {
 
 	private static void getDeviceInfo(Context context) {
 		String key = "devid";
-		SharedPreferences sharedPreferences = context.getSharedPreferences(
-				"f2cdevice", Context.MODE_PRIVATE);
+		SharedPreferences sharedPreferences = context.getSharedPreferences("f2cdevice", Context.MODE_PRIVATE);
 		String devid = sharedPreferences.getString(key, null);
 		if (devid == null) {
 			sDeviceId = StringUtil.MD5Encode(getImei(context)

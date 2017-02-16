@@ -96,7 +96,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
     private Button btn_hot, btn_recommend; //热销产品，推荐产品
     private TextView txt_trust, txt_management, txt_private_placement, txt_all, id_iv_right;
 
-    private ArrayList<ImageBean> images;
+    private ArrayList<ImageBean> images; //轮播图集合
     private ImageBean imgbean = null;
     private LinearLayout ll_home_recommend_product;
     private ScrollView scroll_main;
@@ -119,7 +119,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
         // 初始化SlidingMenu
         initView();
         initLeftMenu();
-        initData();
+        initData(); //加载轮播图
         requestData();
     }
 
@@ -191,14 +191,12 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
         menu.addIgnoredView(mViewpager);
 //		menu.addIgnoredView(scroll_main);
         menu.setOnOpenedListener(new OnOpenedListener() {
-
             @Override
             public void onOpened() {
 //				menu.showMenu(false);
             }
         });
         menu.setOnClosedListener(new OnClosedListener() {
-
             @Override
             public void onClosed() {
 //				menu.setTouchModeBehind(SlidingMenu.TOUCHMODE_FULLSCREEN);//菜单栏划回主屏幕
@@ -211,6 +209,9 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
         requestInPageData();
     }
 
+    /**
+     * 加载轮播图
+     */
     public void requestInPageData() {
         HtmlRequest.getAdvertise(MainActivity.this, new OnRequestListener() {
             @Override
@@ -226,11 +227,9 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
                             imgbean.setDescription(resultAdvertiseContentBean.getDescription());
                             images.add(imgbean);
                         }
-
                     } else {
                     }
                 } else {
-
                 }
 
                 //轮播图
@@ -238,8 +237,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
                 cycleAdapter.setNetAndLinearLayoutMethod(mLinearLayout);
                 cycleAdapter.setOnImageListener(new ImageCycleViewListener() {
                     @Override
-                    public void onImageClick(int postion, View imageView) {//图片点击事件
-
+                    public void onImageClick(int postion, View imageView) { //图片点击事件
                     }
                 });
                 cycleAdapter.setCycle(true);
@@ -247,9 +245,7 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
                 mViewpager.addView(cycleAdapter);
             }
         });
-
     }
-
 
     private MouldList<ResultHotProductContentBean> hotProductBean;
 
@@ -314,8 +310,6 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
                 } else {
                     Toast.makeText(MainActivity.this, "加载失败，请确认网络通畅", Toast.LENGTH_LONG).show();
                 }
-
-
             }
         });
     }
@@ -344,21 +338,16 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
         });
     }
 
-
     private MouldList<MouldList<ResultRecommendProductContentBean>> recommendBean;
 
     //推荐产品
     public void requestRecommendProductData() {
         HtmlRequest.getRecommendProduct(MainActivity.this, new OnRequestListener() {
-
             @Override
             public void onRequestFinished(BaseParams params) {
-
                 ResultRecommendProductContentTwo data = (ResultRecommendProductContentTwo) params.result;
-
                 if (data != null) {
                     recommendBean = data.getRecommendProduct();
-
                     if (TextUtils.isEmpty(data.getAuditStatus())) {
                         PreferenceUtil.setAuditStatus(null);
                     } else {
@@ -619,18 +608,15 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
 
     private void requestData() {
         HtmlRequest.checkVersion(MainActivity.this, TYPE, new OnRequestListener() {
-
             @Override
             public void onRequestFinished(BaseParams params) {
                 if (params.result != null) {
                     final ResultCheckVersionContentBean b = (ResultCheckVersionContentBean) params.result;
                     if (!b.getVersion().equals(SystemInfo.sVersionName)) {
-
                         AlertDialog.Builder builder = new Builder(MainActivity.this);
-                        builder.setMessage("点击确认下载更新");
                         builder.setTitle("发现新版本");
+                        builder.setMessage("点击确认下载更新");
                         builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
-
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent updateIntent = new Intent(MainActivity.this, AppUpgradeService.class);
@@ -752,7 +738,6 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
     public void onNetWorkChange(String netType) {
         View netHint = findViewById(R.id.netfail_hint);
         netHint.setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Settings.ACTION_SETTINGS);
@@ -763,7 +748,6 @@ public class MainActivity extends BaseMainActivity implements OnClickListener, O
         if (netHint != null) {
             boolean netFail = TextUtils.isEmpty(netType);
             netHint.setVisibility(netFail ? View.VISIBLE : View.GONE);
-
         }
     }
 }
